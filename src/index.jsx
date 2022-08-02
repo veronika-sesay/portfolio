@@ -20,7 +20,9 @@ const App = () => {
           onClick={() => setNavopen(!navopen)}
           className="nav-btn"
         ></button>
-        <div className={navopen ? 'nav-mobile' : 'nav-mobile nav--closed '}>
+        <div
+          className={navopen ? 'nav-mobile' : 'nav-mobile nav-mobile--closed '}
+        >
           <Link onClick={closeNav} to="/Home">
             Domů
           </Link>
@@ -44,8 +46,8 @@ const App = () => {
           <Link to="/Contact">Kontakt</Link>
           <Link to="/Offline">Offline projekty</Link>
         </nav>
+        <Outlet />
       </header>
-      <Outlet />
     </>
   );
 };
