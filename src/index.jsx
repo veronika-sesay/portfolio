@@ -46,8 +46,10 @@ const App = () => {
           <Link to="/Contact">Kontakt</Link>
           <Link to="/Offline">Offline projekty</Link>
         </nav>
-        <Outlet />
       </header>
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 };
