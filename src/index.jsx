@@ -1,51 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
-import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
-import { useState } from 'react';
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import { Home } from './components/Home';
 import { CV } from './components/CV';
 import { Portfolio } from './components/Portfolio';
 import { Contact } from './components/Contact';
 import { Offline } from './components/Offline';
+import { Navigation } from './components/Navigation';
 
 const App = () => {
-  const [navopen, setNavopen] = useState(false);
-  const closeNav = () => setNavopen(false);
-
+  const [langVersion, setLangVersion] = useState('CZ');
+  const handleSelectLanguage = (language) => {
+    setLangVersion(language);
+    langVersion === 'CZ'
+      ? (content = content.Czech)
+      : (content = content.English);
+  };
   return (
     <>
       <header>
-        <button
-          onClick={() => setNavopen(!navopen)}
-          className="nav-btn"
-        ></button>
-        <div
-          className={navopen ? 'nav-mobile' : 'nav-mobile nav-mobile--closed '}
-        >
-          <Link onClick={closeNav} to="/Home">
-            Domů
-          </Link>
-          <Link onClick={closeNav} to="/CV">
-            CV
-          </Link>
-          <Link onClick={closeNav} to="/Portfolio">
-            Portfolio
-          </Link>
-          <Link onClick={closeNav} to="/Contact">
-            Kontakt
-          </Link>
-          <Link onClick={closeNav} to="/Offline">
-            Offline projekty
-          </Link>
-        </div>
-        <nav>
-          <Link to="/Home">Domů</Link>
-          <Link to="/CV">CV</Link>
-          <Link to="/Portfolio">Portfolio</Link>
-          <Link to="/Contact">Kontakt</Link>
-          <Link to="/Offline">Offline projekty</Link>
-        </nav>
+        <Navigation onSelectLanguage={handleSelectLanguage} />
       </header>
       <main>
         <Outlet />

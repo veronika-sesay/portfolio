@@ -8,7 +8,7 @@ export const Home = () => {
   return (
     <>
       <div className="intro">
-        <video className="intro__logo" autoplay="autoplay" muted>
+        <video className="intro__logo" autoPlay="autoplay" muted>
           <source src="/img/logo-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
