@@ -13,9 +13,9 @@ const App = () => {
   const [langVersion, setLangVersion] = useState('CZ');
   const handleSelectLanguage = (language) => {
     setLangVersion(language);
-    langVersion === 'CZ'
-      ? (content = content.Czech)
-      : (content = content.English);
+    // langVersion === 'CZ'
+    //   ? (content = content.Czech)
+    //   : (content = content.English);
   };
   return (
     <>
