@@ -8,12 +8,11 @@ export const Navigation = ({ onSelectLanguage }) => {
   const closeNav = () => setNavOpen(false);
 
   const [isOn, setIsOn] = useState(false);
-  const [language, setLanguage] = useState('CZ');
-  console.log(language);
+  const [language, setLanguage] = useState('English');
+  console.log(language, 'language');
   const switchOn = () => {
     setIsOn(!isOn);
-    isOn ? setLanguage('CZ') : setLanguage('EN');
-    console.log(language);
+    isOn ? setLanguage('English') : setLanguage('Czech');
     onSelectLanguage(language);
   };
 
@@ -22,7 +21,7 @@ export const Navigation = ({ onSelectLanguage }) => {
       <div className="lang-switch">
         <label className="toggle">
           <input onChange={switchOn} id="lang-btn" type="checkbox" />
-          <span className="labels" data-on="CZ" data-off="EN"></span>
+          <span className="labels" data-on="EN" data-off="CZ"></span>
         </label>
       </div>
       <div className="mobile-menu">
@@ -34,31 +33,33 @@ export const Navigation = ({ onSelectLanguage }) => {
           className={navOpen ? 'nav-mobile' : 'nav-mobile nav-mobile--closed '}
         >
           <Link onClick={closeNav} to="/home">
-            {language === 'CZ' ? 'Domů' : 'Home'}
+            {language === 'Czech' ? 'Domů' : 'Home'}
           </Link>
           <Link onClick={closeNav} to="/cv">
-            {language === 'CZ' ? 'CV' : 'CV'}
+            {language === 'Czech' ? 'CV' : 'CV'}
           </Link>
           <Link onClick={closeNav} to="/portfolio">
-            {language === 'CZ' ? 'Portfolio' : 'Portfolio'}
+            {language === 'Czech' ? 'Portfolio' : 'Portfolio'}
           </Link>
           <Link onClick={closeNav} to="/contact">
-            {language === 'CZ' ? 'Kontakt' : 'Contact'}
+            {language === 'Czech' ? 'Kontakt' : 'Contact'}
           </Link>
           <Link onClick={closeNav} to="/offline">
-            {language === 'CZ' ? 'Offline projekty' : 'Offline projects'}
+            {language === 'Czech' ? 'Offline projekty' : 'Offline projects'}
           </Link>
         </div>
       </div>
       <nav>
-        <Link to="/home">{language === 'CZ' ? 'Domů' : 'Home'}</Link>
-        <Link to="/cv">{language === 'CZ' ? 'CV' : 'CV'}</Link>
+        <Link to="/home">{language === 'Czech' ? 'Domů' : 'Home'}</Link>
+        <Link to="/cv">{language === 'Czech' ? 'CV' : 'CV'}</Link>
         <Link to="/portfolio">
-          {language === 'CZ' ? 'Portfolio' : 'Portfolio'}
+          {language === 'Czech' ? 'Portfolio' : 'Portfolio'}
         </Link>
-        <Link to="/vontact">{language === 'CZ' ? 'Kontakt' : 'Contact'}</Link>
+        <Link to="/vontact">
+          {language === 'Czech' ? 'Kontakt' : 'Contact'}
+        </Link>
         <Link to="/offline">
-          {language === 'CZ' ? 'Offline projekty' : 'Offline projects'}
+          {language === 'Czech' ? 'Offline projekty' : 'Offline projects'}
         </Link>
       </nav>
     </>

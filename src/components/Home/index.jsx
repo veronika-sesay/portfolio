@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
+import { useOutletContext } from 'react-router-dom';
 
 export const Home = () => {
+  const [langVersion, setLangVersion] = useOutletContext();
   const [contactMe, setContactMe] = useState(false);
   const openContactForm = () => setContactMe(true);
+
+  let content = {
+    English: {
+      intro: 'Hello',
+    },
+    Czech: {
+      intro: 'Ahoj',
+    },
+  };
+
+  console.log(langVersion, 'langVersion pres outlet');
+  langVersion === 'Czech'
+    ? (content = content.Czech)
+    : (content = content.English);
 
   return (
     <>
@@ -21,16 +37,7 @@ export const Home = () => {
             />
           </div>
           <div className="info__text">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a
-              at delectus inventore perspiciatis temporibus obcaecati repellat
-              corrupti consequatur magnam sed hic quasi, saepe voluptas ipsa
-              placeat. Consequuntur, placeat asperiores. Lorem ipsum dolor sit
-              amet consectetur, adipisicing elit. Quos delectus sed magnam
-              voluptas nulla fugit itaque officiis. Vel aliquid incidunt
-              delectus hic consequatur possimus voluptates, cum iure eaque dicta
-              libero?
-            </p>
+            <p>{content.intro}</p>
           </div>
         </div>
       </div>

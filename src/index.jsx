@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
@@ -10,20 +10,19 @@ import { Offline } from './components/Offline';
 import { Navigation } from './components/Navigation';
 
 const App = () => {
-  const [langVersion, setLangVersion] = useState('CZ');
+  const [langVersion, setLangVersion] = useState('English');
   const handleSelectLanguage = (language) => {
     setLangVersion(language);
-    // langVersion === 'CZ'
-    //   ? (content = content.Czech)
-    //   : (content = content.English);
+    console.log(langVersion, 'langVersion App');
   };
+
   return (
     <>
       <header>
         <Navigation onSelectLanguage={handleSelectLanguage} />
       </header>
       <main>
-        <Outlet />
+        <Outlet context={[langVersion, setLangVersion]} />
       </main>
     </>
   );
