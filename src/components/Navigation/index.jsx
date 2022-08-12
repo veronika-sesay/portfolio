@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 
@@ -9,12 +9,15 @@ export const Navigation = ({ onSelectLanguage }) => {
 
   const [isOn, setIsOn] = useState(false);
   const [language, setLanguage] = useState('English');
-  console.log(language, 'language');
+  console.log(language, 'language nav aktualni');
   const switchOn = () => {
     setIsOn(!isOn);
     isOn ? setLanguage('English') : setLanguage('Czech');
-    onSelectLanguage(language);
   };
+
+  useEffect(() => {
+    onSelectLanguage(language), [language];
+  });
 
   return (
     <>

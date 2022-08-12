@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import { useOutletContext } from 'react-router-dom';
 
@@ -24,7 +24,7 @@ export const Home = () => {
   return (
     <>
       <div className="intro">
-        <video className="intro__logo" autoPlay="autoplay" muted>
+        <video className="intro__logo" autoPlay muted>
           <source src="/img/logo-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

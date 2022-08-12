@@ -13,7 +13,7 @@ const App = () => {
   const [langVersion, setLangVersion] = useState('English');
   const handleSelectLanguage = (language) => {
     setLangVersion(language);
-    console.log(langVersion, 'langVersion App');
+    console.log(langVersion, 'langVersion App po kliknuti');
   };
 
   return (
@@ -22,7 +22,7 @@ const App = () => {
         <Navigation onSelectLanguage={handleSelectLanguage} />
       </header>
       <main>
-        <Outlet context={[langVersion, setLangVersion]} />
+        <Outlet context={[langVersion]} />
       </main>
     </>
   );
