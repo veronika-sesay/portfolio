@@ -1,14 +1,13 @@
 .intro {
-  margin: 0 10%;
+  margin: 3% 8%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: 7%; */
+  font-weight: 300;
 }
 
-.intro__logo {
-  /*flex: 1 1 0;
-  width: 0;*/
+.intro--hide {
+  display: none;
 }
 
 .intro__info {
@@ -16,15 +15,63 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border-left: 2px solid var(--yellow); */
-  /* flex: 1 1 0;
-  width: 0; */
 }
 
 .info__photo img {
-  max-width: 70%;
+  max-width: 100%;
   display: block;
-  /*margin: auto;*/
+  margin: auto;
+}
+
+.info__text {
+  margin-top: 8%;
+  line-height: 1.5;
+  text-align: left;
+  font-size: 16px;
+}
+
+.contact-form__btn {
+  background-color: var(--mediumteal);
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding: 1%;
+  align-items: center;
+  border: 2px solid var(--lightteal);
+  border-style: outset;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  margin: 5% auto;
+}
+
+.contact-form label {
+  width: 100%;
+  margin-bottom: 3%;
+  line-height: 1.5;
+}
+
+.contact-form input[type='text'],
+input[type='email'] {
+  background-color: var(--grey);
+  width: 100%;
+  height: 2rem;
+}
+
+.contact-form textarea {
+  background-color: var(--grey);
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+}
+
+.contact-form--closed {
+  display: none;
 }
 
 @media (max-width: 540px) {
@@ -32,6 +79,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -5%;
   }
   .intro__logo {
     max-width: 100%;
@@ -44,9 +92,47 @@
     margin: 0 auto;
   }
   .info__text {
-    margin-top: 20%;
-    font-weight: 300;
-    line-height: 1.5;
-    text-align: justify;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .contact-form {
+    max-width: 92%;
+  }
+
+  .contact-form input[type='text'],
+  input[type='email'] {
+    height: 1.5rem;
+  }
+}
+
+@media (min-width: 540px) {
+  .intro {
+    gap: 5%;
+  }
+  .intro__logo {
+    flex: 1 1 0;
+    width: 0;
+  }
+
+  .intro__info {
+    flex: 1 1 0;
+    width: 0;
+    padding: 0 0 5% 7%;
+    border-left: 2px solid var(--yellow);
+  }
+}
+
+@media (min-width: 768px) {
+  .info__text {
+    font-size: 18px;
+  }
+
+  .contact-form__btn {
+    font-size: 20px;
+  }
+
+  .contact-form {
+    font-size: 18px;
   }
 }
