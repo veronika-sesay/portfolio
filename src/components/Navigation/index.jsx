@@ -58,7 +58,7 @@ export const Navigation = ({ onSelectLanguage }) => {
         <Link to="/portfolio">
           {language === 'Czech' ? 'Portfolio' : 'Portfolio'}
         </Link>
-        <Link to="/vontact">
+        <Link to="/contact">
           {language === 'Czech' ? 'Kontakt' : 'Contact'}
         </Link>
         <Link to="/offline">

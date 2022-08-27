@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
-import { useOutletContext } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 
 export const Home = () => {
   const [langVersion, setLangVersion] = useOutletContext();
@@ -55,6 +55,14 @@ export const Home = () => {
             <p>{content.intro}</p>
           </div>
         </div>
+      </div>
+      <div className={contactMe ? 'soc-net--hide' : 'soc-net'}>
+        <a href="https://github.com/veronika-sesay">
+          <img id="github-icon" src="/img/github-icon.svg" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/veronika-sesay-cz/">
+          <img src="/img/linkedin-icon.svg" alt="LinkedIn" />
+        </a>
       </div>
       <div className="contact-form">
         <button

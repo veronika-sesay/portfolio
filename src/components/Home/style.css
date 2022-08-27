@@ -30,6 +30,24 @@
   font-size: 16px;
 }
 
+.soc-net {
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+  margin: 5% auto;
+}
+
+.soc-net img {
+  width: 40px;
+  height: 40px;
+  filter: invert(80%);
+  cursor: pointer;
+}
+
+.soc-net--hide {
+  display: none;
+}
+
 .contact-form__btn {
   background-color: var(--mediumteal);
   color: white;
@@ -39,6 +57,7 @@
   align-items: center;
   border: 2px solid var(--lightteal);
   border-style: outset;
+  cursor: pointer;
 }
 
 .contact-form {
@@ -48,6 +67,8 @@
   align-items: center;
   max-width: 80%;
   margin: 5% auto;
+  position: sticky;
+  top: 0;
 }
 
 .contact-form label {
@@ -96,6 +117,11 @@ input[type='email'] {
     text-align: center;
   }
 
+  .soc-net img {
+    width: 30px;
+    height: 30px;
+  }
+
   .contact-form {
     max-width: 92%;
   }
@@ -120,12 +146,22 @@ input[type='email'] {
     width: 0;
     padding: 0 0 5% 7%;
     border-left: 2px solid var(--yellow);
+    border-bottom: 2px solid var(--yellow);
+  }
+
+  .soc-net {
+    gap: 2%;
   }
 }
 
 @media (min-width: 768px) {
   .info__text {
     font-size: 18px;
+  }
+
+  .soc-net img {
+    width: 50px;
+    height: 50px;
   }
 
   .contact-form__btn {
