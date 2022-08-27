@@ -72,11 +72,14 @@ export const Home = () => {
           {content.contactBtn}
         </button>
         <form
+          name="contact-form"
+          method="POST"
+          data-netlify="true"
           className={
             contactMe ? 'contact-form' : 'contact-form contact-form--closed'
           }
-          action=""
         >
+          <input type="hidden" name="form-name" value="contact-form"></input>
           <label htmlFor="name">
             {content.formName}
             <input type="text" name="name" id="name" size="60" />
@@ -94,7 +97,7 @@ export const Home = () => {
               rows="10"
             ></textarea>
           </label>
-          <button onClick type="submit" className="contact-form__btn">
+          <button type="submit" className="contact-form__btn">
             {content.submitBtn}
           </button>
           <div className="submit-message"></div>
