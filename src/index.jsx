@@ -24,6 +24,7 @@ const App = () => {
       <main>
         <Outlet context={[langVersion]} />
       </main>
+      <footer></footer>
     </>
   );
 };

@@ -78,7 +78,7 @@
   height: 2rem;
   background-image: url('/public/img/hamburger-icon-fill.svg');
   background-size: contain;
-  margin: 0.5rem;
+  margin: 1rem;
   cursor: pointer;
   border-style: none;
   border-color: none;
@@ -120,12 +120,12 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 2rem;
-  border-bottom: 4px solid var(--darkteal);
+  border-bottom: 3px solid var(--darkteal);
 }
 
 nav a {
   margin: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: var(--text);
   text-decoration: none;
@@ -133,14 +133,14 @@ nav a {
 }
 
 nav a:hover {
-  font-size: 1.75rem;
+  font-size: 1.3rem;
 }
 
 nav a:active,
 nav a:focus {
   border-bottom: 1px solid var(--yellow);
   border-left: 1px solid var(--yellow);
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 
 @media (max-width: 540px) {
@@ -148,7 +148,7 @@ nav a:focus {
     display: none;
   }
   nav a {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .toggle {
     width: 2rem;
@@ -160,15 +160,15 @@ nav a:focus {
 }
 @media (max-width: 768px) {
   nav a {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   nav a:hover {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   nav a:active,
   nav a:focus {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
