@@ -30,7 +30,7 @@
 .info__photo img {
   max-width: 100%;
   display: block;
-  box-shadow: 1px 1px 25px var(--darkteal);
+  box-shadow: 2px 2px 40px var(--darkteal);
 }
 
 .info__text {

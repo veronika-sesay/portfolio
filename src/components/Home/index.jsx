@@ -112,7 +112,6 @@ export const Home = () => {
           <button type="submit" className="contact-form__btn">
             {content.submitBtn}
           </button>
-          <div className="submit-message"></div>
         </form>
       </div>
     </>

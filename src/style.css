@@ -28,8 +28,7 @@ body {
 }
 
 header {
-  margin-top: 2rem;
-  height: 6rem;
+  height: 4rem;
   color: var(--text);
   background-color: var(--background);
 }
