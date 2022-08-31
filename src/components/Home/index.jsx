@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import './style.css';
-import { Link, useOutletContext } from 'react-router-dom';
+import { useOutletContext } from 'react-router-dom';
 
 export const Home = () => {
   const [langVersion, setLangVersion] = useOutletContext();
 
   const [contactMe, setContactMe] = useState(false);
-  const [submitForm, setSubmitForm] = useState(false);
 
   let content = {
     English: {
