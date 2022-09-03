@@ -44,10 +44,7 @@ export const Navigation = ({ onSelectLanguage }) => {
           <Link onClick={closeNav} to="/portfolio">
             {language === 'Czech' ? 'Portfolio' : 'Portfolio'}
           </Link>
-          <Link onClick={closeNav} to="/contact">
-            {language === 'Czech' ? 'Kontakt' : 'Contact'}
-          </Link>
-          <Link onClick={closeNav} to="/offline">
+          <Link onClick={closeNav} to="/offlineprojects">
             {language === 'Czech' ? 'Offline projekty' : 'Offline projects'}
           </Link>
         </div>
@@ -58,10 +55,7 @@ export const Navigation = ({ onSelectLanguage }) => {
         <Link to="/portfolio">
           {language === 'Czech' ? 'Portfolio' : 'Portfolio'}
         </Link>
-        <Link to="/contact">
-          {language === 'Czech' ? 'Kontakt' : 'Contact'}
-        </Link>
-        <Link to="/offline">
+        <Link to="/offlineprojects">
           {language === 'Czech' ? 'Offline projekty' : 'Offline projects'}
         </Link>
       </nav>

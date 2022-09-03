@@ -4,13 +4,12 @@ import { useOutletContext } from 'react-router-dom';
 
 export const Home = () => {
   const [langVersion, setLangVersion] = useOutletContext();
-
   const [contactMe, setContactMe] = useState(false);
 
   let content = {
     English: {
       intro:
-        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. At mollitia facere nam dolorum vero natus, aut iusto rerum cumque quos esse illo quas modi aspernatur maxime consequuntur, nihil eum laborum! Lorem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa ea qui quam perferendis porro veniam consectetur, a quas eligendi nobis ratione esse architecto aspernatur magnam perspiciatis recusandae temporibus deserunt cum?',
+        'Welcome! I am quite new to front-end development, but aleady in love. I am looking for new job opportunities as well as freelance projects. Find out more about me...',
       formName: 'Name',
       email: 'E-mail',
       contactBtn: 'Contact me',
@@ -21,7 +20,8 @@ export const Home = () => {
         'Thank you for contacting me, I will reply to you shortly. Have a nice day!',
     },
     Czech: {
-      intro: 'Ahoj',
+      intro:
+        'Vítejte! Ve světe front-endového vývoje jsem sice nová, ale již jsem mu propadla. Hledám nové pracovní příležitosti i samostatné projekty. Pojďte se o mně dozvědět více...',
       formName: 'Jméno',
       email: 'E-mail',
       contactBtn: 'Kontaktujte mě',

@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import { Home } from './components/Home';
 import { CV } from './components/CV';
 import { Portfolio } from './components/Portfolio';
-import { Contact } from './components/Contact';
 import { Offline } from './components/Offline';
 import { Navigation } from './components/Navigation';
 
@@ -37,8 +36,7 @@ createRoot(document.querySelector('#app')).render(
         <Route path="home" element={<Home />} />
         <Route path="cv" element={<CV />} />
         <Route path="portfolio" element={<Portfolio />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="offline" element={<Offline />} />
+        <Route path="offlineprojects" element={<Offline />} />
         <Route
           path="*"
           element={
