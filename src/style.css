@@ -32,3 +32,7 @@ header {
   color: var(--text);
   background-color: var(--background);
 }
+
+.hide {
+  display: none;
+}

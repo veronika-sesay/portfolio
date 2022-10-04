@@ -135,7 +135,7 @@ nav a {
 }
 
 nav a:hover {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   border-bottom: 2px solid var(--darkteal);
 }
 

@@ -1,7 +1,3 @@
-.hide {
-  display: none;
-}
-
 .intro {
   margin: 0 5%;
   display: flex;
@@ -62,22 +58,28 @@
 }
 
 .contact-form__btn {
-  background-color: var(--yellow);
+  background-color: black;
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  padding: 1%;
+  padding: 1.5%;
   align-items: center;
-  border: 2px solid black;
-  border-style: outset;
+  border: 2px solid var(--darkteal);
+  box-shadow: 3px 3px 10px 3px var(--darkteal);
   cursor: pointer;
   min-width: max-content;
+  max-height: max-content;
   margin: 5% 3% 5% 0;
 }
 
 .contact-form__btn--back {
   margin: 2% auto;
+}
+
+.contact-form__btn:hover,
+.contact-form__btn--back:hover {
+  transform: scale(1.2);
 }
 
 .contact-form {
