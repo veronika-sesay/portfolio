@@ -10,6 +10,14 @@ export const CV = () => {
   const [skillsOpen, setSkillsOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
   const [educationOpen, setEducationOpen] = useState(false);
+  const [contentOpen, setContentOpen] = useState(false);
+  const closeContent = () => {
+    setExperienceOpen(!experienceOpen);
+    setSkillsOpen(!skillsOpen);
+    setCoursesOpen(!coursesOpen);
+    setEducationOpen(!educationOpen);
+    setContentOpen(!contentOpen);
+  };
 
   let content = {
     English: {
@@ -52,6 +60,7 @@ export const CV = () => {
         <button
           onClick={() => {
             setExperienceOpen(!experienceOpen);
+            setContentOpen(!contentOpen);
           }}
           className="cv-button"
         >
@@ -60,6 +69,7 @@ export const CV = () => {
         <button
           onClick={() => {
             setSkillsOpen(!skillsOpen);
+            setContentOpen(!contentOpen);
           }}
           className="cv-button"
         >
@@ -68,6 +78,7 @@ export const CV = () => {
         <button
           onClick={() => {
             setCoursesOpen(!coursesOpen);
+            setContentOpen(!contentOpen);
           }}
           className="cv-button"
         >
@@ -76,35 +87,30 @@ export const CV = () => {
         <button
           onClick={() => {
             setEducationOpen(!educationOpen);
+            setContentOpen(!contentOpen);
           }}
           className="cv-button"
         >
           <h2>{content.education}</h2>
         </button>
       </div>
-      <div className="cv-content">
-        <div className={experienceOpen ? 'cv-content-experience' : 'hide'}>
-          <Parallax
-            className="parallax"
-            bgImage="/img/teal-yellow-smoke.jpg"
-            bgImageAlt=""
-            strength={800}
-            blur={{ min: -5, max: 5 }}
-          >
+      <div>
+        <Parallax
+          className="parallax"
+          bgImage="/img/teal-yellow-smoke.jpg"
+          bgImageAlt=""
+          strength={800}
+        >
+          <div className={experienceOpen ? 'cv-content' : 'hide'}>
             <Experience />
-            <button
-              onClick={() => {
-                setExperienceOpen(!experienceOpen);
-                setSkillsOpen(!skillsOpen);
-                setCoursesOpen(!coursesOpen);
-                setEducationOpen(!educationOpen);
-              }}
-              className="cv-button--back"
-            >
-              {content.backButton}
-            </button>
-          </Parallax>
-        </div>
+          </div>
+        </Parallax>
+        <button
+          onClick={closeContent}
+          className={contentOpen ? 'cv-button--back' : 'hide'}
+        >
+          {content.backButton}
+        </button>
       </div>
     </>
   );

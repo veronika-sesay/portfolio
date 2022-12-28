@@ -25,7 +25,7 @@ export const Experience = () => {
         'creation and implementation of processes to ensure transparency,cost and time efficiency',
         'project evaluation',
       ],
-      area2: 'Virtual a IT projects',
+      area2: 'Virtual and IT projects',
       description2: [
         'transformation of learning events to virtual environment: virtual conferences, webinars, mobile apps for events, hybrid meetings',
         'UX design and management of internal Global Audit & Assurace Learning website',
