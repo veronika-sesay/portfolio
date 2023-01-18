@@ -13,17 +13,17 @@ export const Job = ({
   description2,
 }) => {
   return (
-    <div className="job-item">
-      <div className="job-item__details">
+    <div className="cv-item">
+      <div className="cv-item__details">
         <h3>{role}</h3>
-        <p className="job-company">
+        <p className="company">
           {company}, {city}
         </p>
         <p>
           {from} - {to}
         </p>
       </div>
-      <div className="job-item__role">
+      <div className="cv-item__role">
         <h4>{area1}</h4>
         <ul>{description1}</ul>
         <h4>{area2}</h4>

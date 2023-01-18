@@ -1,6 +1,5 @@
 import React from 'react';
 import { Job } from '../Job';
-import './style.css';
 import { useOutletContext } from 'react-router-dom';
 
 export const Experience = () => {

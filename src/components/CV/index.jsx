@@ -3,6 +3,7 @@ import './style.css';
 import { Parallax } from 'react-parallax';
 import { Experience } from './Experience';
 import { useOutletContext } from 'react-router-dom';
+import { Skills } from './Skills';
 
 export const CV = () => {
   const [langVersion, setLangVersion] = useOutletContext();
@@ -12,11 +13,11 @@ export const CV = () => {
   const [educationOpen, setEducationOpen] = useState(false);
   const [contentOpen, setContentOpen] = useState(false);
   const closeContent = () => {
-    setExperienceOpen(!experienceOpen);
-    setSkillsOpen(!skillsOpen);
-    setCoursesOpen(!coursesOpen);
-    setEducationOpen(!educationOpen);
-    setContentOpen(!contentOpen);
+    setExperienceOpen(false);
+    setSkillsOpen(false);
+    setCoursesOpen(false);
+    setEducationOpen(false);
+    setContentOpen(false);
   };
 
   let content = {
@@ -60,7 +61,10 @@ export const CV = () => {
         <button
           onClick={() => {
             setExperienceOpen(!experienceOpen);
-            setContentOpen(!contentOpen);
+            setSkillsOpen(false);
+            setCoursesOpen(false);
+            setEducationOpen(false);
+            setContentOpen(true);
           }}
           className="cv-button"
         >
@@ -69,7 +73,10 @@ export const CV = () => {
         <button
           onClick={() => {
             setSkillsOpen(!skillsOpen);
-            setContentOpen(!contentOpen);
+            setExperienceOpen(false);
+            setCoursesOpen(false);
+            setEducationOpen(false);
+            setContentOpen(true);
           }}
           className="cv-button"
         >
@@ -78,7 +85,10 @@ export const CV = () => {
         <button
           onClick={() => {
             setCoursesOpen(!coursesOpen);
-            setContentOpen(!contentOpen);
+            setExperienceOpen(false);
+            setSkillsOpen(false);
+            setEducationOpen(false);
+            setContentOpen(true);
           }}
           className="cv-button"
         >
@@ -87,7 +97,10 @@ export const CV = () => {
         <button
           onClick={() => {
             setEducationOpen(!educationOpen);
-            setContentOpen(!contentOpen);
+            setExperienceOpen(false);
+            setSkillsOpen(false);
+            setCoursesOpen(false);
+            setContentOpen(true);
           }}
           className="cv-button"
         >
@@ -103,6 +116,9 @@ export const CV = () => {
         >
           <div className={experienceOpen ? 'cv-content' : 'hide'}>
             <Experience />
+          </div>
+          <div className={skillsOpen ? 'cv-content' : 'hide'}>
+            <Skills />
           </div>
         </Parallax>
         <button
