@@ -4,6 +4,7 @@ import { Parallax } from 'react-parallax';
 import { Experience } from './Experience';
 import { useOutletContext } from 'react-router-dom';
 import { Skills } from './Skills';
+import { Courses } from './Courses';
 
 export const CV = () => {
   const [langVersion, setLangVersion] = useOutletContext();
@@ -120,13 +121,16 @@ export const CV = () => {
           <div className={skillsOpen ? 'cv-content' : 'hide'}>
             <Skills />
           </div>
+          <div className={coursesOpen ? 'cv-content' : 'hide'}>
+            <Courses />
+          </div>
+          <button
+            onClick={closeContent}
+            className={contentOpen ? 'cv-button--back' : 'hide'}
+          >
+            {content.backButton}
+          </button>
         </Parallax>
-        <button
-          onClick={closeContent}
-          className={contentOpen ? 'cv-button--back' : 'hide'}
-        >
-          {content.backButton}
-        </button>
       </div>
     </>
   );

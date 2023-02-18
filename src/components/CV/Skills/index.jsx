@@ -1,5 +1,4 @@
 import React from 'react';
-import './style.css';
 import { useOutletContext } from 'react-router-dom';
 
 export const Skills = () => {
@@ -76,7 +75,7 @@ export const Skills = () => {
 
   return (
     <div className="skills">
-      <div className="skills__item">
+      <div className="cv-item">
         <h3>{content.IT[0]}</h3>
         <ul>
           <li>{content.IT[1]}</li>
@@ -94,7 +93,7 @@ export const Skills = () => {
           <li>{content.IT[11]}</li>
         </ul>
       </div>
-      <div className="skills__item">
+      <div className="cv-item">
         <h3>{content.Languages[0]}</h3>
         <ul>
           <li>{content.Languages[1]}</li>
@@ -102,7 +101,7 @@ export const Skills = () => {
           <li>{content.Languages[3]}</li>
         </ul>
       </div>
-      <div className="skills__item">
+      <div className="cv-item">
         <h3>{content.Other[0]}</h3>
         <ul>
           <li>{content.Other[1]}</li>
