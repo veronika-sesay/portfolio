@@ -161,6 +161,7 @@ nav a:focus {
     font-size: 10px;
   }
 }
+
 @media (max-width: 768px) {
   nav a {
     font-size: 1rem;

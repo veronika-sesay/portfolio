@@ -27,6 +27,7 @@ export const Experience = () => {
       area2: 'Virtual and IT projects',
       description2: [
         'transformation of learning events to virtual environment: virtual conferences, webinars, mobile apps for events, hybrid meetings',
+        'creation of internal websites on the Zoomforth platform - using templates and coding in HTML and CSS',
         'UX design and management of internal Global Audit & Assurace Learning website',
         'MS Teams communication channel - creating posts, graphic banners, communicaiton calendar',
         'management of educational platform with AI features (Cura)',
@@ -126,6 +127,7 @@ export const Experience = () => {
       area2: 'Virtuální a IT projekty',
       description2: [
         'transformace vzdělávacích akcí do virtuálního prostředí: virtuální konference, webináře, mobilní aplikace pro eventy, hybridní meetingy',
+        'tvorba interních webových stránek na platformě Zoomforth - práce se šablonami, vytváření kódu v HTML a CSS',
         'UX design a správa obsahu interních webových stránek Global A&A Learning',
         'komunikační kanál na MS Teams – tvorba příspěvků, grafických bannerů, komunikačního kalendáře',
         'management vzdělávací platformy s prvky umělé inteligence (Cura)',

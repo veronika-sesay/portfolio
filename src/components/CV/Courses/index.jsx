@@ -11,7 +11,7 @@ export const Courses = () => {
         'Czechitas / 2022',
         '300 learning-hour certified requalification course completed by a project and final exam ',
         'HTML/CSS, JavaScript, React, Git, UX/UI',
-        'the final project "Freaks and Comrads" was awarded the best community contribution prize',
+        'the final project "Freaks and Comrads" was awarded the greatest community contribution prize',
       ],
       Prince: [
         'Prince 2 Foundation',
@@ -26,7 +26,7 @@ export const Courses = () => {
         'Czechitas / 2022',
         'rekvalifikační kurz v rozsahu 300 hodin zakončený zkouškou, projektem a certifikátem',
         'HTML/CSS, JavaScript, React, Git, UX/UI',
-        'závěrečný projekt Máničky a soudruzi oceněn za největší společenský přesah',
+        'závěrečný projekt "Máničky a soudruzi" oceněn za největší společenský přesah',
       ],
       Prince: [
         'Prince 2 Foundation',
