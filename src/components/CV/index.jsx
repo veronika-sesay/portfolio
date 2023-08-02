@@ -5,6 +5,7 @@ import { Experience } from './Experience';
 import { useOutletContext } from 'react-router-dom';
 import { Skills } from './Skills';
 import { Courses } from './Courses';
+import { Education } from './Education';
 
 export const CV = () => {
   const [langVersion, setLangVersion] = useOutletContext();
@@ -65,7 +66,7 @@ export const CV = () => {
             setSkillsOpen(false);
             setCoursesOpen(false);
             setEducationOpen(false);
-            setContentOpen(true);
+            setContentOpen(!contentOpen);
           }}
           className="cv-button"
         >
@@ -77,7 +78,7 @@ export const CV = () => {
             setExperienceOpen(false);
             setCoursesOpen(false);
             setEducationOpen(false);
-            setContentOpen(true);
+            setContentOpen(!contentOpen);
           }}
           className="cv-button"
         >
@@ -89,7 +90,7 @@ export const CV = () => {
             setExperienceOpen(false);
             setSkillsOpen(false);
             setEducationOpen(false);
-            setContentOpen(true);
+            setContentOpen(!contentOpen);
           }}
           className="cv-button"
         >
@@ -101,7 +102,7 @@ export const CV = () => {
             setExperienceOpen(false);
             setSkillsOpen(false);
             setCoursesOpen(false);
-            setContentOpen(true);
+            setContentOpen(!contentOpen);
           }}
           className="cv-button"
         >
@@ -123,6 +124,9 @@ export const CV = () => {
           </div>
           <div className={coursesOpen ? 'cv-content' : 'hide'}>
             <Courses />
+          </div>
+          <div className={educationOpen ? 'cv-content' : 'hide'}>
+            <Education />
           </div>
           <button
             onClick={closeContent}

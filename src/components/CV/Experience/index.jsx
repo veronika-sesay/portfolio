@@ -21,7 +21,7 @@ export const Experience = () => {
         'communication with key stakeholders',
         'managing technical support teams',
         'finance management and budget creation',
-        'creation and implementation of processes to ensure transparency,cost and time efficiency',
+        'creation and implementation of processes to ensure transparency, cost and time efficiency',
         'project evaluation',
       ],
       area2: 'Virtual and IT projects',
@@ -85,7 +85,7 @@ export const Experience = () => {
       role: 'Translator',
       area1: '',
       description1: [
-        'English translation and proof reading of educational materials for the project of "Innovation of Regional Development and International Territorial Sturies bachelor degree programs"',
+        'English translation and proof reading of educational materials for the project of "Innovation of Regional Development and International Territorial Studies bachelor degree programs"',
       ],
       area2: '',
       description2: [],
