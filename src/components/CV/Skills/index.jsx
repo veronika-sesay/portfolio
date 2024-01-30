@@ -8,7 +8,7 @@ export const Skills = () => {
     English: {
       IT: [
         'IT',
-        'advanced begginer in creation of responsive and interactive websites - skills acquired in a 300-hour certified course completed by an exam and a final project:',
+        'advanced beginner in creation of responsive and interactive websites - skills acquired in a 300-hour certified course completed by an exam and a final project:',
         'HTML5/CSS3',
         'JavaScript (ES6)',
         'ReactJS (v18)',

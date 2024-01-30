@@ -28,7 +28,7 @@ export const Experience = () => {
       description2: [
         'transformation of learning events to virtual environment: virtual conferences, webinars, mobile apps for events, hybrid meetings',
         'creation of internal websites on the Zoomforth platform - using templates and coding in HTML and CSS',
-        'UX design and management of internal Global Audit & Assurace Learning website',
+        'UX design and management of internal Global Audit & Assurance Learning website',
         'MS Teams communication channel - creating posts, graphic banners, communicaiton calendar',
         'management of educational platform with AI features (Cura)',
       ],
