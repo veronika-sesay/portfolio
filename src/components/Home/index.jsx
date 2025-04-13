@@ -1,56 +1,28 @@
 import React, { useState } from 'react';
 import './style.css';
 import { useOutletContext } from 'react-router-dom';
+import { homeContent, mediaPaths } from '../../content';
 
 export const Home = () => {
-  const [langVersion, setLangVersion] = useOutletContext();
+  const [langVersion] = useOutletContext();
+  const content =
+    langVersion === 'Czech' ? homeContent.Czech : homeContent.English;
   const [contactMe, setContactMe] = useState(false);
-
-  let content = {
-    English: {
-      intro:
-        'Welcome! I am quite new to front-end development, but aleady in love. I am looking for new job opportunities as well as freelance projects. Find out more about me...',
-      formName: 'Name',
-      email: 'E-mail',
-      contactBtn: 'Contact me',
-      backBtn: 'Go back',
-      message: 'Your message',
-      submitBtn: 'Send message',
-      submitMessage:
-        'Thank you for contacting me, I will reply to you shortly. Have a nice day!',
-    },
-    Czech: {
-      intro:
-        'Vítejte! Ve světe front-endového vývoje jsem sice nová, ale již jsem mu propadla. Hledám nové pracovní příležitosti i samostatné projekty. Pojďte se o mně dozvědět více...',
-      formName: 'Jméno',
-      email: 'E-mail',
-      contactBtn: 'Kontaktujte mě',
-      backBtn: 'Jdi zpět',
-      message: 'Vaše zpráva',
-      submitBtn: 'Odeslat',
-      submitMessage:
-        'Děkuji za Vaši zprávu, ozvu se Vám co nejdříve. Hezký den!',
-    },
-  };
-
-  langVersion === 'Czech'
-    ? (content = content.Czech)
-    : (content = content.English);
 
   return (
     <>
       <div className={contactMe ? 'hide' : 'intro'}>
         <div className="intro__left">
           <video width="80%" className="intro__logo" autoPlay muted>
-            <source src="/img/logo-video-resized.mp4" type="video/mp4" />
+            <source src={mediaPaths.logoVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="soc-net">
             <a href="https://github.com/veronika-sesay">
-              <img id="github-icon" src="/img/github-icon.svg" alt="GitHub" />
+              <img id="github-icon" src={mediaPaths.githubIcon} alt="GitHub" />
             </a>
             <a href="https://www.linkedin.com/in/veronika-sesay-cz/">
-              <img src="/img/linkedin-icon.svg" alt="LinkedIn" />
+              <img src={mediaPaths.linkedinIcon} alt="LinkedIn" />
             </a>
           </div>
           <button
@@ -64,7 +36,7 @@ export const Home = () => {
           <div className="info__photo">
             <img
               id="profile-photo"
-              src="/img/profile-photo.JPG"
+              src={mediaPaths.profilePhoto}
               alt="Veronika Sesay"
             />
           </div>
