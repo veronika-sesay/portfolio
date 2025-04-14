@@ -12,6 +12,7 @@ export const mediaPaths = {
   githubIcon: '/img/github-icon.svg',
   linkedinIcon: '/img/linkedin-icon.svg',
   profilePhoto: '/img/profile-photo.JPG',
+  hamburgerIcon: '/img/hamburger-icon.svg',
 };
 
 export const homeContent = {

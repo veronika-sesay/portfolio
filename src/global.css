@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /* colors */
+  --black: #000000;
+  --teal: #167f8d;
+  --sky-blue: #78d1e2;
+  --light-blue: #a7e8f1;
+  --thulian-pink: #e072a4;
+  --azure: #eef9fb;
+  --white: #ffffff;
+
+  /* breakpoints */
+  --xs: 540px;
+  --sm: 768px;
+  --md: 1280px;
+  --lg: 1600px;
+  --xl: 2048px;
+
+  /* container max-width */
+  --br-xs: 480px;
+  --br-sm: 615px;
+  --br-md: 1024px;
+  --br-lg: 1280px;
+  --br-xl: 1400px;
+  --br-xxl: 1600px;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--black);
+  color: var(--azure);
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+header {
+  /* position: relative;
+  overflow: visible;
+  z-index: 10; */
+  color: var(--azure);
+  background-color: var(--black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.hide {
+  display: none;
+}
+
+.container {
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    max-width: var(--br-sm);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .container {
+    width: 80%;
+    max-width: var(--br-md);
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1600px) {
+  .container {
+    width: 75%;
+    max-width: var(--br-lg);
+  }
+}
+
+@media (min-width: 1601px) and (max-width: 2048px) {
+  .container {
+    width: 70%;
+    max-width: var(--br-xl);
+  }
+}
+
+@media (min-width: 2049px) {
+  .container {
+    width: 65%;
+    max-width: var(--br-xxl);
+  }
+}

@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import './style.css';
+import './global.css';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import { Home } from './components/Home';
 import { CV } from './components/CV';
 import { Portfolio } from './components/Portfolio';
 import { Offline } from './components/Offline';
 import { Navigation } from './components/Navigation';
-import { notFoundNote } from './content';
 import { NotFound } from './components/NotFound';
 
 const App = () => {
