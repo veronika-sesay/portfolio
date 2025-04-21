@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './global.css';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import { Home } from './components/Home';
-import { CV } from './components/CV';
+import { About } from './components/About';
 import { Portfolio } from './components/Portfolio';
 import { Offline } from './components/Offline';
 import { Navigation } from './components/Navigation';
@@ -34,7 +34,7 @@ createRoot(document.querySelector('#app')).render(
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
         <Route path="home" element={<Home />} />
-        <Route path="cv" element={<CV />} />
+        <Route path="about" element={<About />} />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="offlineprojects" element={<Offline />} />
         <Route path="*" element={<NotFound />} />

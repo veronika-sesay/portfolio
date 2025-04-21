@@ -41,8 +41,8 @@ export const Navigation = ({ onSelectLanguage }) => {
             <Link onClick={closeNav} to="/home">
               {language === 'Czech' ? 'Domů' : 'Home'}
             </Link>
-            <Link onClick={closeNav} to="/cv">
-              {language === 'Czech' ? 'CV' : 'CV'}
+            <Link onClick={closeNav} to="/about">
+              {language === 'Czech' ? 'O mně' : 'About me'}
             </Link>
             <Link onClick={closeNav} to="/portfolio">
               {language === 'Czech' ? 'Portfolio' : 'Portfolio'}
@@ -54,7 +54,7 @@ export const Navigation = ({ onSelectLanguage }) => {
         </div>
         <nav className="nav-desktop">
           <Link to="/home">{language === 'Czech' ? 'Domů' : 'Home'}</Link>
-          <Link to="/cv">{language === 'Czech' ? 'CV' : 'CV'}</Link>
+          <Link to="/about">{language === 'Czech' ? 'O mně' : 'About me'}</Link>
           <Link to="/portfolio">
             {language === 'Czech' ? 'Portfolio' : 'Portfolio'}
           </Link>
