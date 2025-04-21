@@ -38,8 +38,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   background-color: var(--black);
   color: var(--azure);
-  min-height: 100vh;
-  min-width: 100vw;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -65,7 +66,7 @@ h6 {
 }
 
 .container {
-  margin: auto;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
