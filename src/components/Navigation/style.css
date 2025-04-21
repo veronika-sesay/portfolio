@@ -1,27 +1,24 @@
 .navigation {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: flex-start;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   color: var(--azure);
+  margin: 1rem auto;
 }
 
 .lang-switch {
-  position: absolute;
-  top: 3%;
-  left: 2%;
+  position: relative;
+  margin: 1rem 0 0 2.5rem;
+  border-radius: 5px;
 }
 
 .toggle {
-  display: inline-block;
+  display: block;
   width: 2.5rem;
   height: 1.5rem;
   padding: 0.5rem;
-  border: 1px solid var(--thulian-pink);
-  position: relative;
-  margin-bottom: 10%;
   cursor: pointer;
 }
 
@@ -36,9 +33,9 @@
   width: 100%;
   height: 100%;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 300;
   transition: all 0.4s ease-in-out;
-  background-color: var(--thulian-pink);
+  background-color: black;
 }
 
 .toggle .labels::after {
@@ -52,9 +49,10 @@
   height: 100%;
   width: 100%;
   color: var(--azure);
-  background-color: black;
+  background-color: var(--thulian-pink);
   text-align: center;
   transition: all 0.4s ease-in-out;
+  border-radius: 5px;
 }
 
 .toggle .labels::before {
@@ -68,10 +66,11 @@
   height: 100%;
   width: 100%;
   color: var(--azure);
-  background-color: black;
+  background-color: var(--thulian-pink);
   text-align: center;
   opacity: 0;
   transition: all 0.4s ease-in-out;
+  border-radius: 5px;
 }
 
 .toggle input:checked ~ .labels::after {
@@ -95,12 +94,12 @@
 }
 
 .nav-btn {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   background-image: url('/public/img/hamburger-icon.png');
   background-color: black;
   background-size: contain;
-  margin: 1rem;
+  /* margin: 1rem; */
   cursor: pointer;
   border-style: none;
   border-color: none;
@@ -118,7 +117,6 @@
 }
 
 .nav-mobile a {
-  font-size: 0.75rem;
   color: var(--azure);
   text-decoration: none;
   margin-bottom: 10%;
@@ -129,7 +127,7 @@
 .nav-mobile a:hover,
 .nav-mobile a:active,
 .nav-mobile a:focus {
-  border-bottom: 1px solid var(--teal);
+  color: var(--thulian-pink);
 }
 
 .nav-mobile--closed {
@@ -140,26 +138,27 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 2rem;
-  margin-top: 3rem;
+  gap: 2rem;
+  border-bottom: 1px solid var(--teal);
+  margin-bottom: 1rem;
 }
 
 .nav-desktop a {
-  margin: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--azure);
   text-decoration: none;
   padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .nav-desktop a:hover {
-  border-bottom: 1px solid var(--teal);
+  color: var(--thulian-pink);
 }
 
 .nav-desktop a:active,
 .nav-desktop a:focus {
-  border-bottom: 1px solid var(--teal);
-  font-size: 1.3rem;
+  color: var(--thulian-pink);
+  font-size: 1.4rem;
 }
 
 @media (max-width: 768px) {
@@ -167,18 +166,38 @@
     display: none;
   }
 
+  .lang-switch {
+    margin: 0.5rem 0 0 0;
+  }
+
   .toggle {
-    width: 1.5rem;
-    height: 1rem;
+    width: 2rem;
+    height: 1.5rem;
   }
 
   .toggle .labels {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (min-width: 769px) {
   .mobile-menu {
     display: none;
+  }
+}
+
+@media (min-width: 1601px) {
+  .lang-switch {
+    margin: 1rem 0 0 3.5rem;
+  }
+
+  .nav-desktop a {
+    font-size: 1.5rem;
+  }
+
+  .nav-desktop a:active,
+  .nav-desktop a:focus {
+    color: var(--thulian-pink);
+    font-size: 1.6rem;
   }
 }

@@ -21,7 +21,7 @@ export const Home = () => {
       <div className="home container">
         <div className="intro">
           <div className="intro__left">
-            <video width="80%" className="intro__logo" autoPlay muted>
+            <video width="80%" className="intro__logo" autoPlay muted loop>
               <source src={mediaPaths.logoVideo} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
