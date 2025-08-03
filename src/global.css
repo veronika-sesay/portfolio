@@ -44,9 +44,6 @@ body {
 }
 
 header {
-  /* position: relative;
-  overflow: visible;
-  z-index: 10; */
   color: var(--azure);
   background-color: var(--black);
 }
@@ -63,6 +60,10 @@ h6 {
 
 .hide {
   display: none;
+}
+
+.display {
+  display: block;
 }
 
 .container {

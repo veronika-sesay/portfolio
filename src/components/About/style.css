@@ -1,0 +1,121 @@
+.section {
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.underline {
+  border-bottom: 1px solid var(--teal);
+}
+
+.section__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Timeline line */
+.vertical-timeline::before {
+  background: var(--teal);
+  width: 2px !important;
+}
+
+/* Timeline elements */
+.vertical-timeline-element {
+  margin: 2em;
+}
+
+.vertical-timeline.vertical-timeline--two-columns {
+  width: 100% !important;
+}
+
+/* Content styling */
+.vertical-timeline-element-content {
+  padding: 1.5em !important;
+  border-top: 5px solid var(--teal);
+  border-radius: 8px;
+  box-shadow: 0 3px 0 #e6e6e6;
+  color: black;
+}
+
+/* Title styling */
+.vertical-timeline-element-title {
+  margin: 0 0 0.5em;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: black;
+}
+
+/* Subtitle styling */
+.vertical-timeline-element-subtitle {
+  margin: 0 0 1em;
+  font-size: 1em;
+  color: var(--teal);
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Date styling */
+.vertical-timeline-element-date {
+  color: var(--azure);
+  padding: 0.8em !important;
+  font-size: 1.2rem !important;
+  font-family: 'poppins', sans-serif;
+  font-weight: 400 !important;
+  top: 0 !important;
+}
+
+/* List styling */
+.vertical-timeline-element-content ul {
+  margin: 0.5em 0 1em 0;
+  padding-left: 1.5em;
+}
+
+.vertical-timeline-element-content li {
+  margin: 0.3em 0;
+}
+
+/* Section title */
+.vertical-timeline-element-content strong {
+  display: block;
+  margin: 1em 0 0.5em;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+/* Icons */
+.vertical-timeline-element-icon {
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  margin-left: -20px;
+  box-shadow: 0 0 0 2px var(--thulian-pink) !important;
+}
+
+/* Clear floats */
+.vertical-timeline-element:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 1169px) {
+  .vertical-timeline-element-date {
+    display: none !important;
+  }
+
+  .date-inside-mobile {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: black;
+    margin-bottom: 0.5em;
+    display: block;
+  }
+}
+
+@media (min-width: 1170px) {
+  .date-inside-mobile {
+    display: none !important;
+  }
+}

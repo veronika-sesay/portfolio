@@ -1,5 +1,7 @@
 const path = require('path');
+const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -34,15 +36,18 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|svg|gif)$/,
-        type: 'asset/resource'
-      }
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [
-    new CopyPlugin({
-      patterns: [
-        { from: 'public', to: '', noErrorOnMissing: true },
-      ],
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+      Buffer: ['buffer', 'Buffer'],
     }),
+    new CopyPlugin({
+      patterns: [{ from: 'public', to: '', noErrorOnMissing: true }],
+    }),
+    new NodePolyfillPlugin(),
   ],
 };

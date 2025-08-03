@@ -186,6 +186,12 @@
   }
 }
 
+@media (min-width: 769px) and (max-width: 1280px) {
+  .nav-desktop {
+    gap: 1rem;
+  }
+}
+
 @media (min-width: 1601px) {
   .lang-switch {
     margin: 1rem 0 0 3.5rem;
