@@ -403,7 +403,7 @@ export const skillsContent = {
                 'Familiar with building simple sites and workflows using platforms such as WordPress, Wix, or similar visual builders. Comfortable using drag-and-drop tools and integrating basic plugins.',
               bullets: [
                 'WordPress – use of themes, templates, and plugins (forms, maps, widgets)',
-                'SharePoint Designer – creating and managing sites, lists, and libraries, JSON formatting and SPFx components',
+                'SharePoint – creating and managing sites, lists, and libraries, JSON formatting and SPFx components',
                 'Wix – building websites using drag-and-drop interface',
                 'Webflow – building responsive websites visually',
               ],
