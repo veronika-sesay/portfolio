@@ -54,7 +54,7 @@ export const Portfolio = () => {
 
   return (
     <Carousel>
-      <div className="project-container">
+      <div className="project-container container">
         <img src="/img/gyntum.jpg" alt="www.gyntum.cz" />
         <div className="project-text">
           <Link to={content.link}>{content.name}</Link>

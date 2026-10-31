@@ -7,14 +7,33 @@ export const Experience = () => {
 
   const jobs = [
     {
-      from: '2014',
+      from: 'Jan 2024',
       to: 'present',
+      company: 'Deloitte Global',
+      city: 'Prague',
+      role: 'Learning Research & Experiments Specialist',
+      area1: 'Project coordination & experiments',
+      description1: [
+        'coordinated an internal GenAI experimentation programme focused on practical applications for learning processes and content development',
+        'worked with an organising team and up to 40 participants, coordinating experiments, milestones, documentation, communications, and progress tracking',
+        'coordinated expert and stakeholder involvement and adapted scope and schedules as experiments evolved',
+      ],
+      area2: 'Digital content & development',
+      description2: [
+        'created and maintained internal digital resources and microsites with low-code/no-code tools, taking design concepts through implementation and iteration',
+        'tested technologies and evaluated practical applications for internal users',
+        'used Articulate Storyline to support the transformation of e-learning materials',
+      ],
+    },
+    {
+      from: 'Sep 2014',
+      to: 'Dec 2023',
       company: 'Deloitte Global',
       city: 'Prague',
       role: 'Senior Learning Coordinator',
       area1: 'Event management',
       description1: [
-        'complete planning and delivery of Global Audit & Assurance learning events across EMEA, Americas a Asia-Pacific regions',
+        'complete planning and delivery of Global Audit & Assurance learning events across EMEA, the Americas, and Asia-Pacific regions',
         '10 – 15 multi-program events a year, up to 300 participants per event',
         'agile project management (kanban)',
         'venue and other vendor research and contracting',
@@ -29,7 +48,7 @@ export const Experience = () => {
         'transformation of learning events to virtual environment: virtual conferences, webinars, mobile apps for events, hybrid meetings',
         'creation of internal websites on the Zoomforth platform - using templates and coding in HTML and CSS',
         'UX design and management of internal Global Audit & Assurance Learning website',
-        'MS Teams communication channel - creating posts, graphic banners, communicaiton calendar',
+        'MS Teams communication channel - creating posts, graphic banners, communication calendar',
         'management of educational platform with AI features (Cura)',
       ],
     },
@@ -107,8 +126,27 @@ export const Experience = () => {
 
   const jobsCz = [
     {
-      from: '2014',
+      from: '01/2024',
       to: 'současnost',
+      company: 'Deloitte Global',
+      city: 'Praha',
+      role: 'Learning Research & Experiments Specialist',
+      area1: 'Koordinace projektů a experimentů',
+      description1: [
+        'koordinace interního programu experimentů s generativní AI a hledání praktického využití pro vzdělávací procesy a tvorbu obsahu',
+        'spolupráce s organizačním týmem a až 40 účastníky; koordinace experimentů, milníků, dokumentace, komunikace a sledování průběhu',
+        'koordinace zapojení odborníků a zainteresovaných stran a průběžná úprava rozsahu a harmonogramu podle vývoje experimentů',
+      ],
+      area2: 'Digitální obsah a vývoj',
+      description2: [
+        'tvorba a správa interních digitálních zdrojů a microsites pomocí low-code/no-code nástrojů, od návrhu po realizaci a další úpravy',
+        'testování technologií a vyhodnocování jejich praktického využití pro interní uživatele',
+        'využití nástroje Articulate Storyline při transformaci e-learningových materiálů',
+      ],
+    },
+    {
+      from: '09/2014',
+      to: '12/2023',
       company: 'Deloitte Global',
       city: 'Praha',
       role: 'Senior Learning Coordinator',
@@ -243,68 +281,18 @@ export const Experience = () => {
     ? (content = content.Czech)
     : (content = content.English);
 
-  return (
-    <>
-      <Job
-        key={content.key[0]}
-        from={content.from[0]}
-        to={content.to[0]}
-        company={content.company[0]}
-        city={content.city[0]}
-        role={content.role[0]}
-        area1={content.area1[0]}
-        description1={content.description1[0]}
-        area2={content.area2[0]}
-        description2={content.description2[0]}
-      />
-      <Job
-        key={content.key[1]}
-        from={content.from[1]}
-        to={content.to[1]}
-        company={content.company[1]}
-        city={content.city[1]}
-        role={content.role[1]}
-        area1={content.area1[1]}
-        description1={content.description1[1]}
-        area2={content.area2[1]}
-        description2={content.description2[1]}
-      />
-      <Job
-        key={content.key[2]}
-        from={content.from[2]}
-        to={content.to[2]}
-        company={content.company[2]}
-        city={content.city[2]}
-        role={content.role[2]}
-        area1={content.area1[2]}
-        description1={content.description1[2]}
-        area2={content.area2[2]}
-        description2={content.description2[2]}
-      />
-      <Job
-        key={content.key[3]}
-        from={content.from[3]}
-        to={content.to[3]}
-        company={content.company[3]}
-        city={content.city[3]}
-        role={content.role[3]}
-        area3={content.area1[3]}
-        description1={content.description1[3]}
-        area2={content.area2[3]}
-        description2={content.description2[3]}
-      />
-      <Job
-        key={content.key[4]}
-        from={content.from[4]}
-        to={content.to[4]}
-        company={content.company[4]}
-        city={content.city[4]}
-        role={content.role[4]}
-        area1={content.area1[4]}
-        description1={content.description1[4]}
-        area2={content.area2[4]}
-        description2={content.description2[4]}
-      />
-    </>
-  );
+  return content.key.map((key, index) => (
+    <Job
+      key={key}
+      from={content.from[index]}
+      to={content.to[index]}
+      company={content.company[index]}
+      city={content.city[index]}
+      role={content.role[index]}
+      area1={content.area1[index]}
+      description1={content.description1[index]}
+      area2={content.area2[index]}
+      description2={content.description2[index]}
+    />
+  ));
 };

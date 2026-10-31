@@ -1,310 +1,176 @@
-import React, { useState, useEffect, useRef } from 'react';
-import './style.css';
-import { useOutletContext } from 'react-router-dom';
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
+import React, { useState, useEffect, useRef } from "react";
+import "./style.css";
+import { useOutletContext } from "react-router-dom";
 import {
   jobsContent,
   profileContent,
   skillsContent,
   educationContent,
-} from '../../content';
+  certificationsContent,
+} from "../../content";
+
+const pick = (data, lang) => (lang === "Czech" ? data.Czech : data.English);
 
 export const About = () => {
   const [langVersion] = useOutletContext();
-  const profile =
-    langVersion === 'Czech' ? profileContent.Czech : profileContent.English;
-  const skills =
-    langVersion === 'Czech' ? skillsContent.Czech : skillsContent.English;
-  const experience =
-    langVersion === 'Czech' ? jobsContent.Czech : jobsContent.English;
-  const education =
-    langVersion === 'Czech' ? educationContent.Czech : educationContent.English;
-  const [openExperience, setOpenExperience] = useState(false);
-  const [openSkills, setOpenSkills] = useState(false);
-  const [openEducation, setOpenEducation] = useState(false);
-  const openExperienceRef = useRef(null);
-  const openSkillsRef = useRef(null);
-  const openEducationRef = useRef(null);
-
-  useEffect(() => {
-    if (openEducation && openEducationRef.current) {
-      openEducationRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else if (openExperience && openExperienceRef.current) {
-      openExperienceRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else if (openSkills && openSkillsRef.current) {
-      openSkillsRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [openExperience, openSkills, openEducation]);
-
-  // Helper to handle opening only one section at a time
-  const handleSectionToggle = (section) => {
-    if (section === 'skills') {
-      setOpenSkills((prev) => {
-        if (!prev) {
-          setOpenExperience(false);
-          setOpenEducation(false);
-        }
-        return !prev;
-      });
-    } else if (section === 'experience') {
-      setOpenExperience((prev) => {
-        if (!prev) {
-          setOpenSkills(false);
-          setOpenEducation(false);
-        }
-        return !prev;
-      });
-    } else if (section === 'education') {
-      setOpenEducation((prev) => {
-        if (!prev) {
-          setOpenSkills(false);
-          setOpenExperience(false);
-        }
-        return !prev;
-      });
-    }
+  const profile = pick(profileContent, langVersion);
+  const skills = pick(skillsContent, langVersion);
+  const experience = pick(jobsContent, langVersion);
+  const education = pick(educationContent, langVersion);
+  const certifications = pick(certificationsContent, langVersion);
+  const [openJob, setOpenJob] = useState([0, 1]);
+  const [openSection, setOpenSection] = useState(null);
+  const refs = {
+    experience: useRef(null),
+    skills: useRef(null),
+    education: useRef(null),
   };
 
   useEffect(() => {
-    if (openEducation && openEducationRef.current) {
-      openEducationRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else if (openExperience && openExperienceRef.current) {
-      openExperienceRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else if (openSkills && openSkillsRef.current) {
-      openSkillsRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (openSection) {
+      refs[openSection].current?.scrollIntoView({ behavior: "smooth" });
     }
-  }, [openExperience, openSkills, openEducation]);
+  }, [openSection]);
+
+  const toggle = (name) =>
+    setOpenSection((cur) => (cur === name ? null : name));
+
+  const Heading = ({ name, title }) => (
+    <button
+      className="acc__head"
+      aria-expanded={openSection === name}
+      onClick={() => toggle(name)}
+    >
+      <h2>{title}</h2>
+      <span
+        className={`acc__chevron${openSection === name ? " is-open" : ""}`}
+        aria-hidden="true"
+      />
+    </button>
+  );
 
   return (
-    <>
-      <div className="container">
-        <div className="section">
-          <h2>{profile.mainTitle}</h2>
-          <p>{profile.text}</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-            nobis enim perferendis doloremque dolores corporis dicta optio, odit
-            animi et atque laborum deleniti iste cumque assumenda voluptatum ut
-            cupiditate. Quisquam, cumque! Quod, voluptatibus? Quisquam, cumque!
-            Quod, voluptatibus? Quisquam, cumque! Quod, voluptatibus? Quisquam,
-            cumque! Quod, voluptatibus? Quisquam, cumque! Quod, voluptatibus?
-            Quisquam, cumque! Quod, voluptatibus? Quisquam, cumque! Quod,
-            voluptatibus? Quisquam, cumque! Quod, voluptatibus? Quisquam,
-            cumque! Quod, Lorem ipsum dolor, sit amet consectetur adipisicing
-            elit. Recusandae eos quod vitae ullam perferendis excepturi
-            praesentium cupiditate? Ea ratione dolorem, obcaecati maiores natus
-            placeat totam animi illo, illum pariatur cum.
-          </p>
-        </div>
-        <div className="section underline">
-          <div className="section__flex">
-            <h2>{profile.skillsTitle}</h2>
-            <img
-              src="../../img/arrow-down.png"
-              alt="open icon"
-              className={openSkills ? 'hide' : 'display'}
-              onClick={() => handleSectionToggle('skills')}
-            />
-            <img
-              src="../../img/arrow-up.png"
-              alt="open icon"
-              className={openSkills ? 'display' : 'hide'}
-              onClick={() => handleSectionToggle('skills')}
-            />
-          </div>
-        </div>
-        {openSkills && (
-          <div className={openSkills ? 'display' : 'hide'} ref={openSkillsRef}>
-            <VerticalTimeline lineColor="var(--teal)">
-              {Array.isArray(skills) && skills.length > 0 ? (
-                skills.map((skill, index) => (
-                  <VerticalTimelineElement
-                    key={index}
-                    date={`${skill.category}`}
-                    iconStyle={{
-                      background: 'var(--thulian-pink)',
-                      color: 'black',
-                    }}
-                    icon={<i className="fas fa-briefcase" />}
-                    contentStyle={{
-                      background: 'var(--azure)',
-                      color: 'black',
-                    }}
-                    contentArrowStyle={{
-                      borderRight: '7px solid var(--teal)',
-                    }}
+    <div className="container about">
+      <p className="about__intro">{profile.text}</p>
+
+      <section className="about__section" ref={refs.experience}>
+        <Heading name="experience" title={profile.experienceTitle} />
+        {openSection === "experience" && (
+          <ol className="xp">
+            {experience.map((job, i) => {
+              const open = openJob.includes(i);
+              return (
+                <li className={`xp__item${open ? " is-open" : ""}`} key={i}>
+                  <button
+                    className="xp__head"
+                    aria-expanded={open}
+                    onClick={() =>
+                      setOpenJob((cur) =>
+                        open ? cur.filter((n) => n !== i) : [...cur, i],
+                      )
+                    }
                   >
-                    {Array.isArray(skill.sections) &&
-                      skill.sections.length > 0 &&
-                      skill.sections.map((section, idx) => (
-                        <div key={idx}>
-                          <h3 className="vertical-timeline-element-title">
-                            {section.title}
-                          </h3>
-                          {Array.isArray(section.details) &&
-                            section.details.length > 0 &&
-                            section.details.map((detail, idx) => (
-                              <div key={idx}>
-                                <h4 className="vertical-timeline-element-subtitle">
-                                  {detail.subtitle}
-                                </h4>
-                                <ul>
-                                  <li>{detail.description}</li>
-                                  <ul>
-                                    {Array.isArray(detail.bullets) &&
-                                      detail.bullets.length > 0 &&
-                                      detail.bullets.map((point, i) => (
-                                        <li key={i}>{point}</li>
-                                      ))}
-                                  </ul>
-                                </ul>
-                              </div>
-                            ))}
-                        </div>
-                      ))}
-                  </VerticalTimelineElement>
-                ))
-              ) : (
-                <></>
-              )}
-            </VerticalTimeline>
-          </div>
-        )}
-        <div className="section underline">
-          <div className="section__flex">
-            <h2>{profile.experienceTitle}</h2>
-            <img
-              src="../../img/arrow-down.png"
-              alt="open icon"
-              className={openExperience ? 'hide' : 'display'}
-              onClick={() => handleSectionToggle('experience')}
-            />
-            <img
-              src="../../img/arrow-up.png"
-              alt="open icon"
-              className={openExperience ? 'display' : 'hide'}
-              onClick={() => handleSectionToggle('experience')}
-            />
-          </div>
-        </div>
-        {openExperience && (
-          <div
-            className={openExperience ? 'display' : 'hide'}
-            ref={openExperienceRef}
-          >
-            <VerticalTimeline lineColor="var(--teal)">
-              {Array.isArray(experience) && experience.length > 0 ? (
-                experience.map((job, index) => (
-                  <VerticalTimelineElement
-                    key={index}
-                    date={`${job.from} - ${job.to}`}
-                    iconStyle={{
-                      background: 'var(--thulian-pink)',
-                      color: 'black',
-                    }}
-                    icon={<i className="fas fa-briefcase" />}
-                    contentStyle={{
-                      background: 'var(--azure)',
-                      color: 'black',
-                    }}
-                    contentArrowStyle={{
-                      borderRight: '7px solid var(--teal)',
-                    }}
-                  >
-                    <h3 className="vertical-timeline-element-title">
-                      {job.role}
-                    </h3>
-                    <h4 className="vertical-timeline-element-subtitle">
-                      {job.company}, {job.city}
-                    </h4>
-                    <div className="date-inside-mobile">
-                      {job.from} - {job.to}
-                    </div>
-                    {Array.isArray(job.sections) &&
-                      job.sections.length > 0 &&
-                      job.sections.map((section, idx) => (
-                        <div key={idx}>
-                          <strong>{section.title}</strong>
+                    <span className="xp__dates">
+                      {job.from} – {job.to}
+                    </span>
+                    <span className="xp__title">
+                      <strong>{job.role}</strong>
+                      <span>
+                        {job.company}, {job.city}
+                      </span>
+                    </span>
+                    <span className="xp__chevron" aria-hidden="true">
+                      {open ? "−" : "+"}
+                    </span>
+                  </button>
+                  {open && (
+                    <div className="xp__body">
+                      {job.sections?.map((s, k) => (
+                        <div key={k}>
+                          <h3>{s.title}</h3>
                           <ul>
-                            {Array.isArray(section.bullets) &&
-                              section.bullets.length > 0 &&
-                              section.bullets.map((point, i) => (
-                                <li key={i}>{point}</li>
-                              ))}
+                            {s.bullets?.map((b, n) => (
+                              <li key={n}>{b}</li>
+                            ))}
                           </ul>
                         </div>
                       ))}
-                  </VerticalTimelineElement>
-                ))
-              ) : (
-                <></>
-              )}
-            </VerticalTimeline>
+                    </div>
+                  )}
+                </li>
+              );
+            })}
+          </ol>
+        )}
+      </section>
+
+      <section className="about__section" ref={refs.skills}>
+        <Heading name="skills" title={profile.skillsTitle} />
+        {openSection === "skills" && (
+          <div className="skills">
+            {skills.map((group, i) => (
+              <div className="skills__group" key={i}>
+                <h3>{group.category}</h3>
+                {group.sections?.map((s, k) => (
+                  <div key={k} className="skills__block">
+                    {group.sections.length > 1 && <h4>{s.title}</h4>}
+                    {s.details?.map((d, n) => (
+                      <div key={n}>
+                        {d.description && <p>{d.description}</p>}
+                        {d.bullets?.length > 0 && (
+                          <ul className="tags">
+                            {d.bullets.map((b, m) => (
+                              <li key={m}>{b.split(" – ")[0]}</li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
         )}
-        <div className="section underline">
-          <div className="section__flex">
-            <h2>{profile.educationTitle}</h2>
-            <img
-              src="../../img/arrow-down.png"
-              alt="open icon"
-              className={openEducation ? 'hide' : 'display'}
-              onClick={() => handleSectionToggle('education')}
-            />
-            <img
-              src="../../img/arrow-up.png"
-              alt="open icon"
-              className={openEducation ? 'display' : 'hide'}
-              onClick={() => handleSectionToggle('education')}
-            />
-          </div>
-        </div>
-        {openEducation && (
-          <div
-            className={openEducation ? 'display' : 'hide'}
-            ref={openEducationRef}
-          >
-            <VerticalTimeline lineColor="var(--teal)">
-              {Array.isArray(education) && education.length > 0 ? (
-                education.map((school, index) => (
-                  <VerticalTimelineElement
-                    key={index}
-                    date={`${school.from} - ${school.to}`}
-                    iconStyle={{
-                      background: 'var(--thulian-pink)',
-                      color: 'black',
-                    }}
-                    icon={<i className="fas fa-briefcase" />}
-                    contentStyle={{
-                      background: 'var(--azure)',
-                      color: 'black',
-                    }}
-                    contentArrowStyle={{
-                      borderRight: '7px solid var(--teal)',
-                    }}
-                  >
-                    <h3 className="vertical-timeline-element-title">
-                      {school.field}
-                    </h3>
-                    <h4 className="vertical-timeline-element-subtitle">
-                      {school.school}, {school.faculty}, {school.city}
-                    </h4>
-                    <strong>{school.degree}</strong>
-                  </VerticalTimelineElement>
-                ))
-              ) : (
-                <></>
-              )}
-            </VerticalTimeline>
-          </div>
+      </section>
+
+      <section className="about__section" ref={refs.education}>
+        <Heading name="education" title={profile.educationTitle} />
+        {openSection === "education" && (
+          <>
+            <ul className="edu">
+              {education.map((e, i) => (
+                <li key={i}>
+                  <span className="xp__dates">
+                    {e.from} – {e.to}
+                  </span>
+                  <span className="xp__title">
+                    <strong>
+                      {e.degree}, {e.field}
+                    </strong>
+                    <span>
+                      {e.school}, {e.city}
+                    </span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <h3 className="about__subheading">{profile.certificationsTitle}</h3>
+            <ul className="edu">
+              {certifications.map((c, i) => (
+                <li key={i}>
+                  <span className="xp__dates">{c.year}</span>
+                  <span className="xp__title">
+                    <strong>{c.name}</strong>
+                    <span>{c.issuer}</span>
+                    {c.description && <span>{c.description}</span>}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </>
         )}
-        {/* Add extra space at the bottom */}
-        <div style={{ height: '100px' }}></div>
-      </div>
-    </>
+      </section>
+    </div>
   );
 };

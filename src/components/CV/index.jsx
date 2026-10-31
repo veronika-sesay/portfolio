@@ -30,6 +30,8 @@ export const CV = () => {
       courses: 'Courses',
       education: 'Education',
       backButton: 'Back to top',
+      profile:
+        'Project professional with 10+ years of experience coordinating international projects and technology-enabled initiatives, alongside hands-on front-end development. Experienced in planning, stakeholder coordination, Agile/Kanban delivery, implementation, testing, and iterative improvement.',
     },
     Czech: {
       heading: 'O mně',
@@ -38,6 +40,8 @@ export const CV = () => {
       courses: 'Kurzy',
       education: 'Vzdělání',
       backButton: 'Zpět nahoru',
+      profile:
+        'Projektová specialistka s více než desetiletou zkušeností s koordinací mezinárodních projektů a technologických iniciativ, kterou doplňuje praktický front-endový vývoj. Zkušenosti zahrnují plánování, spolupráci se zainteresovanými stranami, agilní řízení pomocí Kanbanu, realizaci, testování a průběžné zlepšování.',
     },
   };
 
@@ -47,19 +51,11 @@ export const CV = () => {
 
   return (
     <>
-      <div className="cv-intro">
+      <div className="cv-intro container">
         <h2>{content.heading}</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          maiores ad architecto ut harum aliquid rem veniam, doloribus itaque
-          quibusdam! Quasi nostrum at dolorem perferendis, officia velit quod
-          repellat similique! Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Non ipsam vitae veritatis cumque sunt expedita architecto ut
-          libero! Velit perferendis praesentium officiis facere commodi fugiat
-          delectus qui ab ad deserunt?
-        </p>
+        <p>{content.profile}</p>
       </div>
-      <div className="cv-title-section">
+      <div className="cv-title-section container">
         <button
           onClick={() => {
             setExperienceOpen(!experienceOpen);
@@ -116,16 +112,16 @@ export const CV = () => {
           bgImageAlt=""
           strength={800}
         >
-          <div className={experienceOpen ? 'cv-content' : 'hide'}>
+          <div className={experienceOpen ? 'cv-content container' : 'hide'}>
             <Experience />
           </div>
-          <div className={skillsOpen ? 'cv-content' : 'hide'}>
+          <div className={skillsOpen ? 'cv-content container' : 'hide'}>
             <Skills />
           </div>
-          <div className={coursesOpen ? 'cv-content' : 'hide'}>
+          <div className={coursesOpen ? 'cv-content container' : 'hide'}>
             <Courses />
           </div>
-          <div className={educationOpen ? 'cv-content' : 'hide'}>
+          <div className={educationOpen ? 'cv-content container' : 'hide'}>
             <Education />
           </div>
           <button

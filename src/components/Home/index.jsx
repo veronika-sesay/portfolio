@@ -21,10 +21,16 @@ export const Home = () => {
       <div className="home container">
         <div className="intro">
           <div className="intro__left">
-            <video width="80%" className="intro__logo" autoPlay muted loop>
-              <source src={mediaPaths.logoVideo} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <h1>Veronika Sesay</h1>
+            <div className="intro__roles">
+              {content.roles.map((role) => (
+                <p className="intro__role" key={role}>
+                  <span aria-hidden="true">&lt;</span>
+                  {role}
+                  <span aria-hidden="true"> /&gt;</span>
+                </p>
+              ))}
+            </div>
           </div>
           <div className="intro__right">
             <div className="intro__photo">
@@ -37,6 +43,7 @@ export const Home = () => {
           </div>
         </div>
         <div className="text">
+          <p className="intro__greeting">{content.greeting}</p>
           <p>{content.intro}</p>
         </div>
         <div className="contact">

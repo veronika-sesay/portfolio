@@ -16,7 +16,7 @@ export const Navigation = ({ onSelectLanguage }) => {
   };
 
   useEffect(() => {
-    onSelectLanguage(language), [language];
+    (onSelectLanguage(language), [language]);
   });
 
   return (
@@ -47,9 +47,6 @@ export const Navigation = ({ onSelectLanguage }) => {
             <Link onClick={closeNav} to="/portfolio">
               {language === 'Czech' ? 'Portfolio' : 'Portfolio'}
             </Link>
-            <Link onClick={closeNav} to="/offlineprojects">
-              {language === 'Czech' ? 'Offline projekty' : 'Offline projects'}
-            </Link>
           </div>
         </div>
         <nav className="nav-desktop">
@@ -57,9 +54,6 @@ export const Navigation = ({ onSelectLanguage }) => {
           <Link to="/about">{language === 'Czech' ? 'O mně' : 'About me'}</Link>
           <Link to="/portfolio">
             {language === 'Czech' ? 'Portfolio' : 'Portfolio'}
-          </Link>
-          <Link to="/offlineprojects">
-            {language === 'Czech' ? 'Offline projekty' : 'Offline projects'}
           </Link>
         </nav>
       </div>

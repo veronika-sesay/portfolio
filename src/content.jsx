@@ -22,8 +22,10 @@ export const notFoundNote = {
 // Home page content
 export const homeContent = {
   English: {
+    greeting: 'Hello, world!',
+    roles: ['project manager', 'technology & creativity'],
     intro:
-      'Welcome! I am quite new to front-end development, but aleady in love. I am looking for new job opportunities as well as freelance projects. Find out more about me...',
+      'I work across project management and digital development, with 10+ years of experience coordinating international projects and hands-on experience building websites with HTML, CSS, JavaScript and React. I like taking an idea, figuring out what needs to happen to make it work, and getting it there — whether that involves people, processes, technology, or all three. Have a look at some of my work.',
     formName: 'Name',
     email: 'E-mail',
     contactBtn: 'Contact me',
@@ -34,8 +36,10 @@ export const homeContent = {
       'Thank you for contacting me, I will reply to you shortly. Have a nice day!',
   },
   Czech: {
+    greeting: 'Hello, world!',
+    roles: ['projektová manažerka', 'technologie & kreativita'],
     intro:
-      'Vítejte! Ve světe front-endového vývoje jsem sice nová, ale již jsem mu propadla. Hledám nové pracovní příležitosti i samostatné projekty. Pojďte se o mně dozvědět více...',
+      'Pohybuji se na pomezí projektového řízení a digitálního vývoje. Mám více než deset let zkušeností s koordinací mezinárodních projektů a praktické zkušenosti s tvorbou webů v HTML, CSS, JavaScriptu a Reactu. Baví mě vzít nápad, zjistit, co je potřeba k jeho uskutečnění, a dotáhnout ho do cíle — ať už to zahrnuje lidi, procesy, technologie, nebo všechno dohromady. Podívejte se na některé z mých projektů.',
     formName: 'Jméno',
     email: 'E-mail',
     contactBtn: 'Kontaktujte mě',
@@ -53,14 +57,16 @@ export const profileContent = {
     skillsTitle: 'Skills',
     experienceTitle: 'Experience',
     educationTitle: 'Education',
-    text: 'I am a passionate web developer with a love for creating dynamic and user-friendly applications. My journey in web development began with a curiosity about how websites work, and it has since evolved into a fulfilling career.',
+    certificationsTitle: 'Certifications & Professional Development',
+    text: 'I combine 10+ years of international project coordination and technology-enabled delivery with hands-on front-end development. I enjoy translating needs into practical digital experiences, working across planning, stakeholder coordination, implementation and iteration.',
   },
   Czech: {
     mainTitle: 'O mně',
     skillsTitle: 'Dovednosti',
     experienceTitle: 'Zkušenosti',
     educationTitle: 'Vzdělání',
-    text: 'Jsem mladá a vášnivá webová vývojářka. Moje cesta do světa webového vývoje začala zájmem o to, jak fungují webové stránky, a od té doby se stala osudným povoláním.',
+    certificationsTitle: 'Certifikace a profesní rozvoj',
+    text: 'Mám více než deset let zkušeností s koordinací mezinárodních projektů a technologických iniciativ, které kombinuji s praktickým front-endovým vývojem. Baví mě vytvářet funkční digitální řešení, propojovat plánování, spolupráci se zainteresovanými stranami, realizaci i další vylepšování daného projektu.',
   },
 };
 
@@ -69,18 +75,26 @@ export const jobsContent = {
   English: [
     {
       from: '01/2024',
-      to: 'present',
+      to: '06/2026',
       company: 'Deloitte Global',
       city: 'Prague',
       role: 'Learning Research & Experiments Specialist',
       sections: [
         {
-          title: 'Frontend Development',
-          bullets: [,],
+          title: 'Project Coordination & Experiments',
+          bullets: [
+            'Coordinated an internal GenAI experimentation programme exploring practical applications for learning processes and content development.',
+            'Worked with an organising team and up to 40 participants in each sprint, coordinating experiments, milestones, documentation, communications, and progress tracking.',
+            'Coordinated expert and stakeholder involvement, adapting scope and schedules as experiments evolved.',
+          ],
         },
         {
-          title: 'Learning Design & Development',
-          bullets: [,],
+          title: 'Digital Content & Development',
+          bullets: [
+            'Created and maintained internal digital resources and microsites with low-code/no-code tools, taking design concepts through implementation and iteration.',
+            'Tested technologies and evaluated practical applications for internal users.',
+            'Used Articulate Storyline to support the transformation of e-learning materials.',
+          ],
         },
       ],
     },
@@ -94,25 +108,28 @@ export const jobsContent = {
         {
           title: 'Event management',
           bullets: [
-            'Complete planning and delivery of Global Audit & Assurance learning events across EMEA, Americas, and Asia-Pacific regions.',
-            '10 – 15 multi-program events a year, up to 300 participants per event.',
-            'Agile project management (Kanban).',
-            'venue and other vendor research and contracting',
-            'communication with key stakeholders',
-            'managing technical support teams',
-            'finance management and budget creation',
-            'creation and implementation of processes to ensure transparency, cost and time efficiency',
-            'project evaluation',
+            'Managed end-to-end delivery of 10–15 multi-program learning events annually across EMEA, the Americas and Asia-Pacific, with up to 300 participants per event.',
+            'Coordinated delivery from requirements and planning through supplier selection, contracting, budgeting, registration, communications, presenter coordination, technology, onsite delivery and post-event financial reconciliation.',
+            'Managed multiple concurrent projects, typically working across different event planning and delivery stages at the same time.',
+            'Planned project tasks, timelines and dependencies and used Kanban-based ways of working to track delivery and progress.',
+            'Coordinated internal stakeholders, presenter/developer teams, technical support teams and external suppliers without direct line-management responsibility.',
+            'Managed event budgets and financial controls, ensuring costs and member-firm recharges remained within agreed parameters.',
+            'Identified and managed delivery risks and unexpected issues, adapting plans to accommodate changing requirements and last-minute operational needs.',
+            'Selected and coordinated external suppliers and supported contract negotiations within internal policies and requirements.',
+            'Collected and coordinated post-event evaluation data and supported financial reconciliation and invoicing processes.',
           ],
         },
         {
           title: 'Virtual and IT projects',
           bullets: [
-            'Transformation of learning events to virtual environment: virtual conferences, webinars, mobile apps for events, hybrid meetings.',
-            'Creation of internal websites on the Zoomforth platform using templates and HTML/CSS.',
-            'UX design and management of internal Global Audit & Assurance Learning website',
-            'MS Teams communication channel - creating posts, graphic banners, communicaiton calendar',
-            'management of educational platform with AI features (Cura)',
+            'Coordinated the transition of learning events into virtual and hybrid environments, including virtual conferences, webinars, mobile event applications and hybrid meetings.',
+            'Defined business and operational requirements for technology solutions and coordinated pilots with technical support teams and IT.',
+            'Organised and tested technology pilots, supported users and coordinated implementation and rollout across multiple events.',
+            'Created and managed internal microsites using Zoomforth and later supported digital content and UX improvements for Global A&A Learning resources.',
+            'Managed communication activities through Microsoft Teams, including communication planning and content coordination.',
+            'Supported management of Cura, an AI-enabled learning platform.',
+            'Used Microsoft Planner for project/task management and Power Automate to automate repetitive task creation for recurring sprint activities.',
+            'Participated in and supported sprint planning, refinement, stand-ups and retrospectives.',
           ],
         },
       ],
@@ -126,10 +143,11 @@ export const jobsContent = {
       sections: [
         {
           bullets: [
-            'Realization of a new global immigration project - Global Immigration Services Centre',
-            'Creation and implementation of new processes, day-to-day communication with key stakeholders - Deloitte offices, vendors and clients',
-            'Contract terms compliance check and KPI reporting',
-            'RFP preparation, administration and invoicing',
+            'Supported implementation of a new global immigration services project and development of processes for coordination across Deloitte offices worldwide.',
+            'Worked with IT to adapt systems and tools to operational requirements and supported the technical side of the new service model.',
+            'Collaborated with global offices, suppliers and clients to implement and refine processes.',
+            'Supported contract compliance, KPI reporting, quotations, administration and invoicing.',
+            'Worked within a global project environment involving different local requirements and regulatory constraints.',
           ],
         },
       ],
@@ -143,8 +161,8 @@ export const jobsContent = {
       sections: [
         {
           bullets: [
-            'Preparation of educational courses and materials',
-            'Tutoring',
+            'Preparation of educational courses and materials.',
+            'Tutoring.',
           ],
         },
       ],
@@ -158,8 +176,8 @@ export const jobsContent = {
       sections: [
         {
           bullets: [
-            'Creation of the project "How to learn foreign languages"',
-            'Teaching of preparatory courses for university entrance exams – economics, EU, modern history, political science',
+            'Creation of the project "How to learn foreign languages".',
+            'Teaching of preparatory courses for university entrance exams – economics, EU, modern history, political science.',
           ],
         },
       ],
@@ -172,7 +190,7 @@ export const jobsContent = {
       role: 'English language teacher (part time)',
       sections: [
         {
-          bullets: ['Teaching English to postgraduate students'],
+          bullets: ['Teaching English to postgraduate students.'],
         },
       ],
     },
@@ -185,7 +203,7 @@ export const jobsContent = {
       sections: [
         {
           bullets: [
-            'Translation of university textbooks into English and proofreading within the project of Innovation of the bachelor study programs in Regional Development and International Territorial Studies',
+            'Translation of university textbooks into English and proofreading within the project of Innovation of the bachelor study programs in Regional Development and International Territorial Studies.',
           ],
         },
       ],
@@ -199,8 +217,8 @@ export const jobsContent = {
       sections: [
         {
           bullets: [
-            'Processing orders in English - communication with customers',
-            'Updating customer accounts and database',
+            'Processing orders in English - communication with customers.',
+            'Updating customer accounts and database.',
           ],
         },
       ],
@@ -214,7 +232,7 @@ export const jobsContent = {
       sections: [
         {
           bullets: [
-            'Teaching general/business English in companies, translations, interpreting',
+            'Teaching general/business English in companies, translations, interpreting.',
           ],
         },
       ],
@@ -223,18 +241,26 @@ export const jobsContent = {
   Czech: [
     {
       from: '01/2024',
-      to: 'současnost',
+      to: '06/2026',
       company: 'Deloitte Global',
       city: 'Prague',
       role: 'Learning Research & Experiments Specialist',
       sections: [
         {
-          title: 'Frontend vývoj',
-          bullets: [],
+          title: 'Koordinace projektů a experimentů',
+          bullets: [
+            'Koordinace interního programu experimentování s GenAI zkoumajícího praktické aplikace pro vzdělávací procesy a tvorbu obsahu.',
+            'Spolupráce s organizačním týmem a až 40 účastníky v každém sprintu, koordinace experimentů, milníků, dokumentace, komunikace a sledování pokroku.',
+            'Koordinace zapojení odborníků a stakeholderů, přizpůsobování rozsahu a harmonogramů podle vývoje experimentů.',
+          ],
         },
         {
-          title: 'Vzdělávací design a vývoj',
-          bullets: [],
+          title: 'Digitální obsah a vývoj',
+          bullets: [
+            'Tvorba a správa interních digitálních zdrojů a microsites pomocí low-code/no-code nástrojů, od návrhu po realizaci a další úpravy.',
+            'Testování technologií a vyhodnocování jejich praktického využití pro interní uživatele.',
+            'Využití nástroje Articulate Storyline při transformaci e-learningových materiálů.',
+          ],
         },
       ],
     },
@@ -248,25 +274,28 @@ export const jobsContent = {
         {
           title: 'Organizace vzdělávacích akcí',
           bullets: [
-            'Kompletní plánování a realizace vzdělávacích akcí Global Audit & Assurance v regionech EMEA, Amerika a Asie-Pacifik.',
-            '10–15 víceprogramových akcí ročně, až 300 účastníků na akci.',
-            'agilní řízení projektů (kanban metoda)',
-            'vyhledávání obchodních partnerů a uzavírání smluv',
-            'komunikace s klíčovými stakeholdery',
-            'řízení týmů technické podpory',
-            'správa financí a tvorba rozpočtu',
-            'vytváření a úprava procesů s cílem zajistit transparentnost, efektivitu nákladů a času',
-            'evaluace projektů',
+            'Kompletní plánování a realizace 10–15 víceprogramových vzdělávacích akcí ročně v regionech EMEA, Amerika a Asie-Pacifik, s až 300 účastníky na akci.',
+            'Koordinace realizace od požadavků a plánování přes výběr dodavatelů, tvorbu rozpočtu, uzavírání smluv, registraci, komunikaci, koordinaci prezentujících, výběr a správu technologií, realizaci na místě až po finanční vyúčtování po akci.',
+            'Řízení několika současně probíhajících projektů v různých fázích plánování a realizace.',
+            'Plánování úkolů projektu, časových harmonogramů a závislostí a využívání Kanban metody pro sledování realizace a pokroku.',
+            'Koordinace interních stakeholderů, týmů prezentujících, týmů technické podpory a externích dodavatelů.',
+            'Řízení rozpočtů akcí a finanční kontroly, přefakturace dle dohodnutých parametrů.',
+            'Řízení rizik, přizpůsobování plánů měnícím se požadavkům a operativním potřebám.',
+            'Výběr a koordinace externích dodavatelů, uzavírání smluv v souladu s interními pravidly a požadavky.',
+            'Sběr a koordinace dat z evaluace po akcích.',
           ],
         },
         {
           title: 'Virtuální a IT projekty',
           bullets: [
-            'Převod vzdělávacích akcí do virtuálního prostředí: virtuální konference, webináře, mobilní aplikace, hybridní schůzky.',
-            'Tvorba interních webů na platformě Zoomforth pomocí šablon a HTML/CSS.',
-            'UX design a správa obsahu interních webových stránek Global A&A Learning',
-            'komunikační kanál na MS Teams – tvorba příspěvků, grafických bannerů, komunikačního kalendáře',
-            'management vzdělávací platformy s prvky umělé inteligence (Cura)',
+            'Koordinace přechodu vzdělávacích akcí do virtuálního a hybridního prostředí: virtuální konference, webináře, mobilní aplikace a hybridní schůzky.',
+            'Definování obchodních a provozních požadavků na technologická řešení a koordinace pilotních projektů s týmy technické podpory a IT.',
+            'Organizace a testování pilotních projektů technologických řešení, podpora uživatelů a koordinace implementace.',
+            'Tvorba a správa interních webů na platformě Zoomforth, podpora digitálního obsahu a UX zlepšení pro interní weby Global A&A Learning.',
+            'Řízení komunikace týmu prostřednictvím Microsoft Teams, včetně plánování komunikace a koordinace obsahu.',
+            'Podpora řízení vzdělávací platformy s prvky umělé inteligence (Cura).',
+            'Řízení projektů/úkolů pomocí Microsoft Planner a automatizace pravidelných úkolů pomocí Power Automate.',
+            'Plánování sprintů, koordinace průběhu stand-up a retrospektiv.',
           ],
         },
       ],
@@ -280,10 +309,11 @@ export const jobsContent = {
       sections: [
         {
           bullets: [
-            'realizace nového globálního imigračního projektu – Global Immigration Services Centre',
-            'vytváření a implementace nových procesů, každodenní komunikace se světovými kancelářemi Deloitte, dodavateli a klienty',
-            'kontrola dodržování smluvních podmínek a reportování KPI',
-            'příprava cenových nabídek, administrace a fakturace',
+            'Podpora implementace nového globálního imigračního projektu a stanovení nových procesů pro koordinaci napříč kancelářemi Deloitte po celém světě.',
+            'Spolupráce s IT na přizpůsobení systémů a nástrojů provozním požadavkům a podpora technické stránky nového servisního modelu.',
+            'Spolupráce se světovými kancelářemi, dodavateli a klienty při implementaci a zdokonalování procesů.',
+            'Podpora dodržování smluvních podmínek, reportování KPI, příprava cenových nabídek, administrace a fakturace.',
+            'Práce v globálním projektovém prostředí s různými místními požadavky a regulatorními omezeními.',
           ],
         },
       ],
@@ -297,7 +327,7 @@ export const jobsContent = {
       sections: [
         {
           bullets: [
-            'příprava výukových kurzů a materiálů – obecné studijní předpoklady, logika, anglický jazyk',
+            'Příprava výukových kurzů a materiálů – obecné studijní předpoklady, logika, anglický jazyk.',
           ],
         },
       ],
@@ -311,8 +341,8 @@ export const jobsContent = {
       sections: [
         {
           bullets: [
-            'tvorba projektu "Jak na jazyky"',
-            'výuka přípravných kurzů k přijímacím zkouškám na vysoké školy – obory ekonomie, EU, moderní historie a politologie',
+            'Tvorba projektu "Jak na jazyky".',
+            'Výuka přípravných kurzů k přijímacím zkouškám na vysoké školy – obory ekonomie, EU, moderní historie a politologie.',
           ],
         },
       ],
@@ -325,7 +355,7 @@ export const jobsContent = {
       role: 'Lektor anglického jazyka (částečný úvazek)',
       sections: [
         {
-          bullets: ['výuka pomaturitních kurzů anglického jazyka'],
+          bullets: ['Výuka pomaturitních kurzů anglického jazyka.'],
         },
       ],
     },
@@ -338,7 +368,7 @@ export const jobsContent = {
       sections: [
         {
           bullets: [
-            'překlad a korektura výukových materiálů pro projekt "Inovace bakalářských studijních programů Regionální rozvoj a Mezinárodní teritoriální studia" do anglického jazyka',
+            'Překlad a korektura výukových materiálů pro projekt "Inovace bakalářských studijních programů Regionální rozvoj a Mezinárodní teritoriální studia" do anglického jazyka.',
           ],
         },
       ],
@@ -352,8 +382,8 @@ export const jobsContent = {
       sections: [
         {
           bullets: [
-            'Processing orders in English - communication with customers',
-            'Updating customer accounts and database',
+            'Zpracování objednávek, komunikace se zákazníky.',
+            'Aktualizace zákaznických účtů a databáze.',
           ],
         },
       ],
@@ -367,7 +397,7 @@ export const jobsContent = {
       sections: [
         {
           bullets: [
-            'výuka obecné/business angličtiny ve firmách, překlady, tlumočení',
+            'Výuka obecné/business angličtiny ve firmách, překlady, tlumočení.',
           ],
         },
       ],
@@ -379,7 +409,27 @@ export const jobsContent = {
 export const skillsContent = {
   English: [
     {
-      category: 'IT',
+      category: 'Project Management',
+      sections: [
+        {
+          title: 'Project Management Experience',
+          details: [
+            {
+              description:
+                '10+ years of experience coordinating international projects, including Kanban-based delivery, stakeholder and supplier coordination, budgets, timelines, and risks. Experience supporting sprint planning, refinement, stand-ups, and retrospectives.',
+              bullets: [
+                'PRINCE2 Foundation',
+                'Agile methodologies (Scrum, Kanban)',
+                'CAPM (certification in progress)',
+                'Microsoft Planner and Power Automate',
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      category: 'Information Technology',
       sections: [
         {
           title: 'Frontend Development',
@@ -417,7 +467,15 @@ export const skillsContent = {
               subtitle: 'Microsoft Office',
               description:
                 'Advanced proficiency in Microsoft Office suite, including creating structured documents, dynamic spreadsheets, and professional presentations. Extensive experience with communication and collaboration tools.',
-              bullets: ['Word', 'Excel', 'PowerPoint', 'Outlook', 'Teams'],
+              bullets: [
+                'Word',
+                'Excel',
+                'PowerPoint',
+                'Outlook',
+                'Teams',
+                'OneNote',
+                'Power Automate',
+              ],
             },
           ],
         },
@@ -427,7 +485,7 @@ export const skillsContent = {
             {
               subtitle: 'Registration Platforms & Tools',
               description:
-                'Hands-on experience using digital tools for event registration, attendee tracking, and communication (e.g. Eventbrite, Google Forms, and in-house systems).',
+                'Hands-on experience using digital tools for event registration, attendee tracking, and communication (e.g. Cvent, Google Forms, and in-house systems).',
               bullets: [],
             },
             {
@@ -474,28 +532,31 @@ export const skillsContent = {
         },
       ],
     },
+  ],
+  Czech: [
     {
-      category: 'Project Management',
+      category: 'Projektové řízení',
       sections: [
         {
-          title: 'Project Management Experience',
+          title: 'Zkušenosti s projektovým řízením',
           details: [
             {
               description:
-                'Practical experience managing projects in international and multicultural teams. Skilled in using both traditional and agile methodologies including Scrum basics and Kanban boards.',
+                'Více než deset let zkušeností s koordinací mezinárodních projektů, agilním řízením pomocí Kanbanu, spoluprací se zainteresovanými stranami a dodavateli, rozpočty, harmonogramy a riziky. Zkušenosti s podporou plánování sprintů, upřesňování úkolů, stand-upů a retrospektiv.',
               bullets: [
-                'PRINCE2 Foundation certificate – structured project management framework',
-                'Agile methods – Kanban board organization, basic Scrum roles and events',
+                'Certifikace PRINCE2 Foundation',
+                'Agilní metodiky (Scrum, Kanban)',
+                'CAPM (certifikace probíhá)',
+                'MS Planner',
+                'MS Power Automate',
               ],
             },
           ],
         },
       ],
     },
-  ],
-  Czech: [
     {
-      category: 'IT',
+      category: 'Informační technologie',
       sections: [
         {
           title: 'Frontend vývoj',
@@ -509,16 +570,21 @@ export const skillsContent = {
                 'JavaScript (ES6) – funkce, práce s DOM, události, fetch API',
                 'ReactJS (v18) – komponenty, hooky, správa stavu',
                 'Git & GitHub – verzování, týmová spolupráce',
-                'VS Code – rozšíření, Live Server, ladění',
+                'VS Code',
                 'UX principy – základy přístupnosti a designu zaměřeného na uživatele',
-                'WordPress – práce s šablonami, pluginy a widgety (formuláře, mapy)',
+                'AI nástroje',
               ],
             },
             {
               subtitle: 'Zkušenosti s low-code / no-code',
               description:
                 'Základy práce s vizuálními nástroji jako WordPress nebo Wix. Schopnost vytvářet jednoduché weby pomocí přetahování komponent a propojení s doplňky.',
-              bullets: [],
+              bullets: [
+                'WordPress – využití šablon a doplňků (formuláře, mapy, widgety)',
+                'SharePoint – vytváření a správa webů, seznamů a knihoven, formátování JSON a komponenty SPFx',
+                'Wix – tvorba webů pomocí komponent',
+                'Webflow – tvorba responzivních webů',
+              ],
             },
           ],
         },
@@ -529,17 +595,25 @@ export const skillsContent = {
               subtitle: 'Microsoft Office',
               description:
                 'Pokročilá znalost aplikací MS Office – tvorba dokumentů, tabulek s funkcemi, prezentací i práce s nástroji pro komunikaci a spolupráci.',
-              bullets: ['Word', 'Excel', 'PowerPoint', 'Outlook', 'Teams'],
+              bullets: [
+                'Word',
+                'Excel',
+                'PowerPoint',
+                'Outlook',
+                'Teams',
+                'OneNote',
+                'Power Automate',
+              ],
             },
           ],
         },
         {
-          title: 'Nástroje pro správu akcí',
+          title: 'Nástroje pro správu eventů',
           details: [
             {
               subtitle: 'Registrační systémy a nástroje',
               description:
-                'Zkušenosti s používáním nástrojů pro registraci účastníků a organizaci akcí (např. Eventbrite, Google Forms, interní systémy).',
+                'Zkušenosti s používáním nástrojů pro registraci účastníků a organizaci akcí (např. Cvent, Google Forms, interní systémy).',
               bullets: [],
             },
             {
@@ -585,24 +659,6 @@ export const skillsContent = {
         },
       ],
     },
-    {
-      category: 'Projektové řízení',
-      sections: [
-        {
-          title: 'Zkušenosti s projektovým řízením',
-          details: [
-            {
-              description:
-                'Praktické zkušenosti s řízením projektů v mezinárodním prostředí. Znalost tradičních i agilních metod řízení včetně základů Scrumu a práce s Kanban tabulemi.',
-              bullets: [
-                'PRINCE2 Foundation certifikát – metodika projektového řízení',
-                'Agilní řízení – organizace práce pomocí Kanban, základní role a události ve Scrumu',
-              ],
-            },
-          ],
-        },
-      ],
-    },
   ],
 };
 
@@ -620,7 +676,7 @@ export const educationContent = {
     },
     {
       from: '09/2005',
-      to: '06/2019',
+      to: '06/2009',
       field: 'Political Science and International Relations',
       degree: "Bachelor's degree",
       school: 'Masaryk University',
@@ -651,7 +707,7 @@ export const educationContent = {
       from: '09/2009',
       to: '06/2012',
       field: 'Hospodářská politika a mezinárodní vztahy',
-      degree: 'magisterské studium',
+      degree: 'Magisterské studium',
       school: 'Masarykova univerzita',
       faculty: 'Ekonomicko-správní fakulta',
       city: 'Brno',
@@ -660,7 +716,7 @@ export const educationContent = {
       from: '09/2005',
       to: '06/2009',
       field: 'Politologie a mezinárodní vztahy',
-      degree: 'bakalářské studium',
+      degree: 'Bakalářské studium',
       school: 'Masarykova univerzita',
       faculty: 'Fakulta sociálních studií',
       city: 'Brno',
@@ -682,6 +738,49 @@ export const educationContent = {
       school: 'University of Bergen',
       faculty: 'Faculty of Social Sciences',
       city: 'Bergen, Norsko',
+    },
+  ],
+};
+
+// About page certifications content
+export const certificationsContent = {
+  English: [
+    {
+      year: '2026 (expected)',
+      name: 'CAPM certification',
+      issuer: 'Exam preparation in progress; audit/exam expected in 2026',
+    },
+    {
+      year: '2022',
+      name: 'Digital Academy: Web',
+      issuer: 'Czechitas',
+      description:
+        '300-hour programme covering HTML/CSS, JavaScript, React, Git and UX/UI',
+    },
+    {
+      year: '2017',
+      name: 'PRINCE2 Foundation',
+      issuer: 'Tayllorcox / Axelos',
+    },
+  ],
+  Czech: [
+    {
+      year: '2026 (předpoklad)',
+      name: 'Certifikace CAPM',
+      issuer:
+        'Probíhá příprava na zkoušku; audit/zkouška se očekává v roce 2026',
+    },
+    {
+      year: '2022',
+      name: 'Digitální akademie: Web',
+      issuer: 'Czechitas',
+      description:
+        '300hodinový program zahrnující HTML/CSS, JavaScript, React, Git a UX/UI',
+    },
+    {
+      year: '2017',
+      name: 'PRINCE2 Foundation',
+      issuer: 'Tayllorcox / Axelos',
     },
   ],
 };
