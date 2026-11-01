@@ -1,12 +1,10 @@
-import { title } from 'process';
+import React from 'react';
 
 // media paths
 export const mediaPaths = {
-  logoVideo: '/img/logo-video-resized.mp4',
   githubIcon: '/img/github-icon.svg',
   linkedinIcon: '/img/linkedin-icon.svg',
-  profilePhoto: '/img/profile-photo.JPG',
-  hamburgerIcon: '/img/hamburger-icon.svg',
+  profilePhoto: '/img/profile-photo.webp',
 };
 
 // Not Found page content
@@ -783,4 +781,116 @@ export const certificationsContent = {
       issuer: 'Tayllorcox / Axelos',
     },
   ],
+};
+
+// Portfolio page content
+export const portfolioContent = {
+  English: {
+    title: 'Selected projects',
+    visitWebsite: 'Visit website',
+    viewSource: 'View source code',
+    technologies: 'Technologies used',
+    showAlternateImage: 'Show alternate screenshot',
+    projects: [
+      {
+        id: 'gyntum',
+        image1: '/img/gyntum1.webp',
+        image2: '/img/gyntum2.webp',
+        imageAlt: 'Preview of the Gyntum website',
+        image2Alt: 'Alternate preview of the Gyntum website',
+        name: 'Gyntum',
+        websiteUrl: 'https://www.gyntum.cz',
+        description:
+          'A presentation website for a medical practitioner, built initially with a WordPress template, but later fully developed using React. It includes contact forms and a Google Maps integration. This was my first web project and introduced me to the world of web development, from domain and hosting setup to building and publishing a website.',
+        technologies: [
+          'React',
+          'TypeScript',
+          'HTML',
+          'CSS',
+          'Contact forms',
+          'Google Maps',
+        ],
+      },
+      {
+        id: 'manicky',
+        image1: '/img/manicky.webp',
+        imageAlt: 'Preview of the Manicky a soudruzi website',
+        name: 'Manicky a soudruzi',
+        websiteUrl: 'https://manickyasoudruzi.netlify.app/',
+        descriptionParts: [
+          'A final project for the Czechitas Academy: Web development course, showcasing our skills in HTML, CSS, and JavaScript. I worked on the project together with an amazing partner ',
+          {
+            text: 'Jitka Hladka',
+            url: 'https://www.linkedin.com/in/jitkahladka/',
+          },
+          ' and our aim was to create a simple interactive SPA focused on learning about communism in the former Czechoslovakia. The project received the award for the biggest societal impact within the Academy.',
+        ],
+        technologies: ['React', 'HTML', 'CSS', 'JavaScript'],
+      },
+      {
+        id: 'barber',
+        image1: '/img/barber.webp',
+        imageAlt: 'Preview of De Kubes Barber Shop website',
+        name: 'De Kubes Barber Shop',
+        websiteUrl: 'https://dekubesbarber.com/',
+        description:
+          'A website for De Kubes Barber Shop, showcasing their services and allowing customers to book appointments online.',
+        technologies: ['React', 'HTML', 'CSS', 'JavaScript', 'Google Maps'],
+      },
+    ],
+  },
+  Czech: {
+    title: 'Vybrané projekty',
+    visitWebsite: 'Navštívit web',
+    viewSource: 'Zobrazit zdrojový kód',
+    technologies: 'Použité technologie',
+    showAlternateImage: 'Zobrazit další snímek',
+    projects: [
+      {
+        id: 'gyntum',
+        image1: '/img/gyntum1.webp',
+        image2: '/img/gyntum2.webp',
+        imageAlt: 'Náhled webu Gyntum',
+        image2Alt: 'Další náhled webu Gyntum',
+        name: 'Gyntum',
+        websiteUrl: 'https://www.gyntum.cz',
+        description:
+          'Prezentační web pro lékařskou ordinaci vytvořený nejprve pomocí šablony WordPress, ale později plně refaktorovaný pomocí Reactu. Obsahuje kontaktní formulář a integraci Google Maps. Byl to můj první webový projekt a seznámil mě s celým procesem webového vývoje, od registrace domény a hostingu až po tvorbu a zveřejnění webu.',
+        technologies: [
+          'React',
+          'TypeScript',
+          'HTML',
+          'CSS',
+          'Kontaktní formuláře',
+          'Google Maps',
+        ],
+      },
+      {
+        id: 'manicky',
+        image1: '/img/manicky.webp',
+        imageAlt: 'Náhled webu Manicky a soudruzi',
+        name: 'Manicky a soudruzi',
+        websiteUrl: 'https://manickyasoudruzi.netlify.app/',
+        descriptionParts: [
+          'Finální projekt v rámci Czechitas Academy: Web development course, kde jsme měli předvést naše dovednosti v HTML, CSS a JavaScriptu. Na projektu jsem pracovala společně s úžasnou partnerkou ',
+          {
+            text: 'Jitkou Hladkou',
+            url: 'https://www.linkedin.com/in/jitkahladka/',
+          },
+          ' a naším cílem bylo vytvořit jednoduchou interaktivní webovou aplikaci zaměřenou na historii komunismu v bývalém Československu. Projekt získal ocenění za největší společenský dopad v rámci Akademie.',
+        ],
+        technologies: ['React', 'HTML', 'CSS', 'JavaScript'],
+      },
+      {
+        id: 'barber',
+        image1: '/img/barber.webp',
+        imageAlt: 'Náhled webu De Kubes Barber Shop',
+        name: 'De Kubes Barber Shop',
+        websiteUrl: 'https://dekubesbarber.com/',
+        description:
+          'Webová stránka pro De Kubes Barber Shop, která prezentuje jejich služby a umožňuje zákazníkům rezervovat si termíny online.',
+        technologies: ['React', 'HTML', 'CSS', 'JavaScript', 'Google Maps'],
+      },
+    ],
+  },
 };

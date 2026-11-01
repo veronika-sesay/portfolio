@@ -1,0 +1,14 @@
+.portfolio {
+  padding: clamp(2rem, 6vw, 5rem) 0;
+}
+
+.portfolio > h1 {
+  margin-bottom: 2rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 1.5rem;
+}

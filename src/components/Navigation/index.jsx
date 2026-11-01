@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 
@@ -7,24 +6,24 @@ export const Navigation = ({ onSelectLanguage }) => {
   const [navOpen, setNavOpen] = useState(false);
   const closeNav = () => setNavOpen(false);
 
-  const [isOn, setIsOn] = useState(false);
   const [language, setLanguage] = useState('English');
-  console.log(language, 'language nav aktualni');
-  const switchOn = () => {
-    setIsOn(!isOn);
-    isOn ? setLanguage('English') : setLanguage('Czech');
+  const switchOn = (event) => {
+    const selectedLanguage = event.currentTarget.checked ? 'Czech' : 'English';
+    setLanguage(selectedLanguage);
+    onSelectLanguage(selectedLanguage);
   };
-
-  useEffect(() => {
-    (onSelectLanguage(language), [language]);
-  });
 
   return (
     <>
       <div className="navigation container">
         <div className="lang-switch">
           <label className="toggle">
-            <input onChange={switchOn} id="lang-btn" type="checkbox" />
+            <input
+              checked={language === 'Czech'}
+              onChange={switchOn}
+              id="lang-btn"
+              type="checkbox"
+            />
             <span className="labels" data-on="EN" data-off="CZ"></span>
           </label>
         </div>

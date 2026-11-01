@@ -85,10 +85,10 @@ export const Home = () => {
                   rows="10"
                 ></textarea>
               </label>
+              <button type="submit" className="contact-form__btn">
+                {content.submitBtn}
+              </button>
             </form>
-            <button type="submit" className="contact-form__btn">
-              {content.submitBtn}
-            </button>
           </div>
         )}
       </div>

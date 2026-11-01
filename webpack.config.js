@@ -3,14 +3,15 @@ const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
-module.exports = {
+module.exports = (_env, argv) => ({
   mode: 'development',
   entry: './src/index.jsx',
-  devtool: 'eval-source-map',
+  devtool: argv.mode === 'production' ? false : 'eval-source-map',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
     assetModuleFilename: 'img/[name]-[hash:6].[ext]',
+    clean: true,
   },
   devServer: {
     historyApiFallback: true,
@@ -38,7 +39,8 @@ module.exports = {
             loader: 'css-loader',
             options: {
               url: {
-                filter: (url) => !url.startsWith('/fonts/'),
+                filter: (url) =>
+                  !url.startsWith('/fonts/') && !url.startsWith('/img/'),
               },
             },
           },
@@ -60,4 +62,4 @@ module.exports = {
     }),
     new NodePolyfillPlugin(),
   ],
-};
+});
