@@ -56,7 +56,7 @@ export const About = () => {
       <section className="about__section" ref={refs.experience}>
         <Heading name="experience" title={profile.experienceTitle} />
         {openSection === "experience" && (
-          <ol className="xp">
+          <ol className="xp about__content">
             {experience.map((job, i) => {
               const open = openJob.includes(i);
               return (
@@ -107,7 +107,7 @@ export const About = () => {
       <section className="about__section" ref={refs.skills}>
         <Heading name="skills" title={profile.skillsTitle} />
         {openSection === "skills" && (
-          <div className="skills">
+          <div className="skills about__content">
             {skills.map((group, i) => (
               <div className="skills__group" key={i}>
                 <h3>{group.category}</h3>
@@ -137,7 +137,7 @@ export const About = () => {
       <section className="about__section" ref={refs.education}>
         <Heading name="education" title={profile.educationTitle} />
         {openSection === "education" && (
-          <>
+          <div className="about__content">
             <ul className="edu">
               {education.map((e, i) => (
                 <li key={i}>
@@ -168,7 +168,7 @@ export const About = () => {
                 </li>
               ))}
             </ul>
-          </>
+          </div>
         )}
       </section>
     </div>

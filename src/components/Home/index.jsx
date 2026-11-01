@@ -9,6 +9,34 @@ export const Home = () => {
     langVersion === 'Czech' ? homeContent.Czech : homeContent.English;
   const [contactMe, setContactMe] = useState(false);
   const contactFormRef = useRef(null);
+  let typingDelay = 0;
+  const typedRoles = content.roles.map((role) => {
+    const typeDuration = role.length * 55;
+    const roleTypingDelay = typingDelay;
+    typingDelay += typeDuration + 350;
+
+    return (
+      <p className="intro__role" key={role}>
+        <span
+          className="intro__role-characters"
+          style={{
+            '--typing-steps': role.length + 4,
+            '--typing-duration': `${typeDuration}ms`,
+            '--typing-delay': `${roleTypingDelay}ms`,
+          }}
+        >
+          <span className="intro__role-bracket" aria-hidden="true">
+            &lt;
+          </span>
+          <span className="intro__role-text">{role}</span>
+          <span className="intro__role-bracket" aria-hidden="true">
+            {' '}
+            /&gt;
+          </span>
+        </span>
+      </p>
+    );
+  });
 
   useEffect(() => {
     if (contactMe && contactFormRef.current) {
@@ -23,13 +51,7 @@ export const Home = () => {
           <div className="intro__left">
             <h1>Veronika Sesay</h1>
             <div className="intro__roles">
-              {content.roles.map((role) => (
-                <p className="intro__role" key={role}>
-                  <span aria-hidden="true">&lt;</span>
-                  {role}
-                  <span aria-hidden="true"> /&gt;</span>
-                </p>
-              ))}
+              {typedRoles}
             </div>
           </div>
           <div className="intro__right">

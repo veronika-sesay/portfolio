@@ -8,13 +8,17 @@ export const Project = ({
   technologiesLabel,
   showAlternateImageLabel,
   imageLoading,
+  animationDelay,
 }) => {
   const images = [project.image1, project.image2].filter(Boolean);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const alternateImageIndex = activeImageIndex === 0 ? 1 : 0;
 
   return (
-    <article className="project-card">
+    <article
+      className="project-card"
+      style={{ '--card-enter-delay': animationDelay }}
+    >
       <div className="project-card__image-frame">
         <img
           className="project-card__image"

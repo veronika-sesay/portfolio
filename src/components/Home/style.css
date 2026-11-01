@@ -46,6 +46,8 @@
 }
 
 .intro__role {
+  display: flex;
+  align-items: baseline;
   color: var(--azure);
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1rem, 2vw, 1.45rem);
@@ -53,8 +55,26 @@
   line-height: 1.4;
 }
 
-.intro__role span {
+.intro__role-characters {
+  display: inline-block;
+  white-space: pre;
+  clip-path: inset(0 100% 0 0);
+  animation: role-typing var(--typing-duration)
+    steps(var(--typing-steps), end) var(--typing-delay) forwards;
+}
+
+.intro__role-bracket {
   color: var(--thulian-pink);
+}
+
+.intro__role-text {
+  color: var(--azure);
+}
+
+@keyframes role-typing {
+  to {
+    clip-path: inset(0);
+  }
 }
 
 .intro__right {
@@ -116,7 +136,7 @@
   height: 42px;
   filter: invert(100%);
   cursor: pointer;
-  transition: transform 160ms ease;
+  transition: transform var(--motion-fast) var(--motion-easing);
 }
 
 .contact img:hover {
@@ -135,8 +155,8 @@
   min-width: max-content;
   max-height: max-content;
   transition:
-    transform 160ms ease,
-    background-color 160ms ease;
+    transform var(--motion-fast) var(--motion-easing),
+    background-color var(--motion-fast) var(--motion-easing);
 }
 
 .contact-form__btn:hover,
@@ -248,6 +268,11 @@ textarea:focus {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .intro__role-characters {
+    clip-path: none;
+    animation: none;
+  }
+
   .contact img,
   .contact-form__btn {
     transition: none;

@@ -23,6 +23,9 @@
   --thulian-pink: #e072a4;
   --azure: #eef9fb;
   --white: #ffffff;
+  --motion-fast: 180ms;
+  --motion-medium: 240ms;
+  --motion-easing: ease-out;
 
   /* breakpoints */
   --xs: 540px;

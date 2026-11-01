@@ -6,6 +6,20 @@
   border: 1px solid rgb(238 249 251 / 15%);
   border-radius: 0.75rem;
   background: #222629;
+  animation: project-card-rise 360ms var(--motion-easing) var(--card-enter-delay, 0ms)
+    both;
+}
+
+@keyframes project-card-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .project-card__image-frame {
@@ -94,8 +108,8 @@
   display: inline-block;
   text-decoration: none;
   transition:
-    color 180ms ease,
-    transform 180ms ease;
+    color var(--motion-fast) var(--motion-easing),
+    transform var(--motion-fast) var(--motion-easing);
 }
 
 .project-card a:hover {
@@ -109,6 +123,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .project-card {
+    animation: none;
+  }
+
   .project-card a {
     transition: none;
   }

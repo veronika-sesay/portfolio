@@ -24,6 +24,7 @@ export const Portfolio = () => {
             technologiesLabel={content.technologies}
             showAlternateImageLabel={content.showAlternateImage}
             imageLoading={index === 0 ? 'eager' : 'lazy'}
+            animationDelay={`${index * 70}ms`}
           />
         ))}
       </div>
