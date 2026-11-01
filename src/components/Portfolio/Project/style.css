@@ -69,7 +69,6 @@
 
 .project-card__description-link {
   color: var(--light-blue);
-  text-underline-offset: 0.2em;
 }
 
 .project-card__technologies {
@@ -89,10 +88,32 @@
 
 .project-card__link {
   color: var(--light-blue);
-  text-underline-offset: 0.2em;
 }
 
-.project-card__link:focus-visible {
+.project-card a {
+  display: inline-block;
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.project-card a:hover {
+  color: var(--thulian-pink);
+  transform: translateY(-2px);
+}
+
+.project-card a:focus-visible {
   outline: 2px solid var(--light-blue);
   outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card a {
+    transition: none;
+  }
+
+  .project-card a:hover {
+    transform: none;
+  }
 }

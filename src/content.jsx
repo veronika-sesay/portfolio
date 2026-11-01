@@ -419,7 +419,7 @@ export const skillsContent = {
                 'PRINCE2 Foundation',
                 'Agile methodologies (Scrum, Kanban)',
                 'CAPM (certification in progress)',
-                'Microsoft Planner and Power Automate',
+                'Microsoft Planner',
               ],
             },
           ],
@@ -443,6 +443,9 @@ export const skillsContent = {
                 'Git & GitHub – version control, collaborative workflows',
                 'VS Code – extensions, live server, debugging tools',
                 'UX principles – accessibility, user-centered design basics',
+                'Netlify – deployment and hosting of static websites',
+                'Cloudflare – CDN and DNS management',
+                'AI tools – usage of artificial intelligence tools for various tasks',
               ],
             },
             {
@@ -545,8 +548,7 @@ export const skillsContent = {
                 'Certifikace PRINCE2 Foundation',
                 'Agilní metodiky (Scrum, Kanban)',
                 'CAPM (certifikace probíhá)',
-                'MS Planner',
-                'MS Power Automate',
+                'Microsoft Planner',
               ],
             },
           ],
@@ -570,6 +572,8 @@ export const skillsContent = {
                 'Git & GitHub – verzování, týmová spolupráce',
                 'VS Code',
                 'UX principy – základy přístupnosti a designu zaměřeného na uživatele',
+                'Netlify – hostování a nasazení statických webů',
+                'Cloudflare – správa CDN a DNS',
                 'AI nástroje',
               ],
             },
@@ -800,6 +804,7 @@ export const portfolioContent = {
         image2Alt: 'Alternate preview of the Gyntum website',
         name: 'Gyntum',
         websiteUrl: 'https://www.gyntum.cz',
+        sourceUrl: 'https://github.com/veronika-sesay/gyntum',
         description:
           'A presentation website for a medical practitioner, built initially with a WordPress template, but later fully developed using React. It includes contact forms and a Google Maps integration. This was my first web project and introduced me to the world of web development, from domain and hosting setup to building and publishing a website.',
         technologies: [
@@ -817,6 +822,7 @@ export const portfolioContent = {
         imageAlt: 'Preview of the Manicky a soudruzi website',
         name: 'Manicky a soudruzi',
         websiteUrl: 'https://manickyasoudruzi.netlify.app/',
+        sourceUrl: 'https://github.com/jitkahla/manickyasoudruzi',
         descriptionParts: [
           'A final project for the Czechitas Academy: Web development course, showcasing our skills in HTML, CSS, and JavaScript. I worked on the project together with an amazing partner ',
           {
@@ -833,9 +839,21 @@ export const portfolioContent = {
         imageAlt: 'Preview of De Kubes Barber Shop website',
         name: 'De Kubes Barber Shop',
         websiteUrl: 'https://dekubesbarber.com/',
+        sourceUrl: 'https://github.com/veronika-sesay/barbershop',
         description:
           'A website for De Kubes Barber Shop, showcasing their services and allowing customers to book appointments online.',
         technologies: ['React', 'HTML', 'CSS', 'JavaScript', 'Google Maps'],
+      },
+      {
+        id: 'pojisteni',
+        image1: '/img/pojisteni.webp',
+        imageAlt: 'Preview of Pojisteni4all website',
+        name: 'Pojisteni4all',
+        websiteUrl: 'https://veronika-sesay.github.io/pojisteni4all/',
+        sourceUrl: 'https://github.com/veronika-sesay/pojisteni4all',
+        description:
+          'A website for Pojisteni4all, providing information about insurance services and contacts. This site was running live only for a short period of time as the company was bought by a larger insurance provider and the website was merged into their main site.',
+        technologies: ['React', 'HTML', 'CSS', 'JavaScript'],
       },
     ],
   },
@@ -854,6 +872,7 @@ export const portfolioContent = {
         image2Alt: 'Další náhled webu Gyntum',
         name: 'Gyntum',
         websiteUrl: 'https://www.gyntum.cz',
+        sourceUrl: 'https://github.com/veronika-sesay/gyntum',
         description:
           'Prezentační web pro lékařskou ordinaci vytvořený nejprve pomocí šablony WordPress, ale později plně refaktorovaný pomocí Reactu. Obsahuje kontaktní formulář a integraci Google Maps. Byl to můj první webový projekt a seznámil mě s celým procesem webového vývoje, od registrace domény a hostingu až po tvorbu a zveřejnění webu.',
         technologies: [
@@ -871,6 +890,7 @@ export const portfolioContent = {
         imageAlt: 'Náhled webu Manicky a soudruzi',
         name: 'Manicky a soudruzi',
         websiteUrl: 'https://manickyasoudruzi.netlify.app/',
+        sourceUrl: 'https://github.com/jitkahla/manickyasoudruzi',
         descriptionParts: [
           'Finální projekt v rámci Czechitas Academy: Web development course, kde jsme měli předvést naše dovednosti v HTML, CSS a JavaScriptu. Na projektu jsem pracovala společně s úžasnou partnerkou ',
           {
@@ -887,9 +907,21 @@ export const portfolioContent = {
         imageAlt: 'Náhled webu De Kubes Barber Shop',
         name: 'De Kubes Barber Shop',
         websiteUrl: 'https://dekubesbarber.com/',
+        sourceUrl: 'https://github.com/veronika-sesay/barbershop',
         description:
           'Webová stránka pro De Kubes Barber Shop, která prezentuje jejich služby a umožňuje zákazníkům rezervovat si termíny online.',
         technologies: ['React', 'HTML', 'CSS', 'JavaScript', 'Google Maps'],
+      },
+      {
+        id: 'pojisteni',
+        image1: '/img/pojisteni.webp',
+        imageAlt: 'Preview of Pojisteni4all website',
+        name: 'Pojisteni4all',
+        websiteUrl: 'https://veronika-sesay.github.io/pojisteni4all/',
+        sourceUrl: 'https://github.com/veronika-sesay/pojisteni4all',
+        description:
+          'Webová stránka pro Pojisteni4all, poskytující informace o pojišťovacích službách a kontakty. Tento web byl aktivní pouze po krátkou dobu, protože společnost byla koupena větším poskytovatelem pojištění a web byl sloučen s jejich hlavní stránkou.',
+        technologies: ['React', 'HTML', 'CSS', 'JavaScript'],
       },
     ],
   },

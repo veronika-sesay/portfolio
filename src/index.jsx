@@ -7,6 +7,7 @@ import { About } from './components/About';
 import { Portfolio } from './components/Portfolio';
 import { Navigation } from './components/Navigation';
 import { NotFound } from './components/NotFound';
+import { Footer } from './components/Footer';
 
 const App = () => {
   const [langVersion, setLangVersion] = useState('English');
@@ -22,7 +23,9 @@ const App = () => {
       <main>
         <Outlet context={[langVersion]} />
       </main>
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };
@@ -35,6 +38,7 @@ createRoot(document.querySelector('#app')).render(
         <Route path="home" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="portfolio" element={<Portfolio />} />
+        <Route path="footer" element={<Footer />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
