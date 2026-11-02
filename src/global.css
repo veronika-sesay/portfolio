@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Lato';
-  src: url('/fonts/Lato-Regular.woff2') format('woff2');
+  font-family: 'OpenSans';
+  src: url('/fonts/OpenSans-VariableFont_wdth,wght.woff2') format('woff2');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -53,7 +53,7 @@
 
 html,
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'OpenSans', sans-serif;
   background-color: var(--black);
   color: var(--azure);
   height: 100%;

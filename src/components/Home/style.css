@@ -178,6 +178,14 @@
   line-height: 1.5;
 }
 
+.contact-form__honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .contact-form input[type='text'],
 input[type='email'] {
   background-color: var(--azure);

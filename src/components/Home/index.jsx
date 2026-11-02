@@ -84,19 +84,50 @@ export const Home = () => {
         </div>
         {contactMe && (
           <div className="contact-form" ref={contactFormRef}>
-            <form name="contact-form" method="POST" data-netlify="true">
+            <form
+              name="contact-form"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
               <input
                 type="hidden"
                 name="form-name"
                 value="contact-form"
               ></input>
+              <div className="contact-form__honeypot" aria-hidden="true">
+                <label htmlFor="bot-field">
+                  Don’t fill this out if you’re human:
+                  <input
+                    type="text"
+                    name="bot-field"
+                    id="bot-field"
+                    tabIndex="-1"
+                    autoComplete="off"
+                  />
+                </label>
+              </div>
               <label htmlFor="name">
                 {content.formName}
-                <input type="text" name="name" id="name" size="60" />
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  size="60"
+                  autoComplete="name"
+                  required
+                />
               </label>
               <label htmlFor="email">
                 {content.email}
-                <input type="email" name="email" id="email" size="60" />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  size="60"
+                  autoComplete="email"
+                  required
+                />
               </label>
               <label htmlFor="message">
                 {content.message}
@@ -105,6 +136,7 @@ export const Home = () => {
                   id="message"
                   cols="50"
                   rows="10"
+                  required
                 ></textarea>
               </label>
               <button type="submit" className="contact-form__btn">

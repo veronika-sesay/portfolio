@@ -3,9 +3,13 @@
 }
 
 .about__intro {
-  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
-  line-height: 1.7;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.5;
   margin-bottom: 3rem;
+}
+
+.about__intro p + p {
+  margin-top: 1rem;
 }
 
 .about__section {
@@ -61,7 +65,7 @@
 }
 
 .acc__head:hover h2 {
-  color: var(--sky-blue);
+  color: var(--thulian-pink);
 }
 
 .acc__chevron {

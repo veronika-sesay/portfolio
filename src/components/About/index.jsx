@@ -51,7 +51,11 @@ export const About = () => {
 
   return (
     <div className="container about">
-      <p className="about__intro">{profile.text}</p>
+      <div className="about__intro">
+        {profile.paragraphs.map((paragraph, i) => (
+          <p key={i}>{paragraph}</p>
+        ))}
+      </div>
 
       <section className="about__section" ref={refs.experience}>
         <Heading name="experience" title={profile.experienceTitle} />

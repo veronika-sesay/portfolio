@@ -56,7 +56,12 @@ export const profileContent = {
     experienceTitle: 'Experience',
     educationTitle: 'Education',
     certificationsTitle: 'Certifications & Professional Development',
-    text: 'I combine 10+ years of international project coordination and technology-enabled delivery with hands-on front-end development. I enjoy translating needs into practical digital experiences, working across planning, stakeholder coordination, implementation and iteration.',
+    paragraphs: [
+      'I like making things work.',
+      'Sometimes that means getting a complicated project organised, sometimes it means figuring out why a website refuses to behave, and sometimes it means finding a simpler way of doing something that has become unnecessarily complicated.',
+      'My background is in project coordination and technology, but I’ve always enjoyed being close to the actual solution rather than just managing it from a distance. This portfolio brings those two sides together — the projects I’ve helped deliver and the things I’ve built along the way.',
+      'Outside work, I like keeping myself busy with things that involve creating, exploring or figuring something out — from making my own cosmetics and Christmas decorations to travelling and competing in pub quizzes. I’m probably happiest when I have something new to learn or a little problem to solve.',
+    ],
   },
   Czech: {
     mainTitle: 'O mně',
@@ -64,7 +69,12 @@ export const profileContent = {
     experienceTitle: 'Zkušenosti',
     educationTitle: 'Vzdělání',
     certificationsTitle: 'Certifikace a profesní rozvoj',
-    text: 'Mám více než deset let zkušeností s koordinací mezinárodních projektů a technologických iniciativ, které kombinuji s praktickým front-endovým vývojem. Baví mě vytvářet funkční digitální řešení, propojovat plánování, spolupráci se zainteresovanými stranami, realizaci i další vylepšování daného projektu.',
+    paragraphs: [
+      'Ráda věci uvádím do chodu.',
+      'Někdy to znamená zorganizovat složitý projekt, někdy zjistit, proč web trochu zlobí, a někdy najít jednodušší způsob, jak zjednodušit něco, co se zdá zbytečně komplikované.',
+      'Mám zkušenosti s koordinací projektů a technologiemi, ale vždy mě bavilo být blízko samotnému řešení, místo abych ho jen řídila z dálky. Toto portfolio spojuje tyto mé stránky dohromady — projekty, na jejichž realizaci jsem se podílela, a věci, které jsem vytvořila sama.',
+      'Mimo práci se ráda zabývám činnostmi, které zahrnují tvoření, objevování nebo hledání řešení — od výroby vlastních kosmetických přípravků a vánočních dekorací po cestování a účast na pub kvízech. Nejšťastnější jsem pravděpodobně, když se mohu něco nového naučit nebo vyřešit.',
+    ],
   },
 };
 
@@ -874,7 +884,7 @@ export const portfolioContent = {
         websiteUrl: 'https://www.gyntum.cz',
         sourceUrl: 'https://github.com/veronika-sesay/gyntum',
         description:
-          'Prezentační web pro lékařskou ordinaci vytvořený nejprve pomocí šablony WordPress, ale později plně refaktorovaný pomocí Reactu. Obsahuje kontaktní formulář a integraci Google Maps. Byl to můj první webový projekt a seznámil mě s celým procesem webového vývoje, od registrace domény a hostingu až po tvorbu a zveřejnění webu.',
+          'Prezentační web pro lékařskou ordinaci vytvořený nejprve pomocí šablony WordPress, ale později plně přetvořený pomocí Reactu. Obsahuje kontaktní formulář a integraci Google Maps. Byl to můj první webový projekt a seznámil mě s celým procesem webového vývoje, od registrace domény a hostingu až po tvorbu a zveřejnění webu.',
         technologies: [
           'React',
           'TypeScript',
@@ -892,12 +902,12 @@ export const portfolioContent = {
         websiteUrl: 'https://manickyasoudruzi.netlify.app/',
         sourceUrl: 'https://github.com/jitkahla/manickyasoudruzi',
         descriptionParts: [
-          'Finální projekt v rámci Czechitas Academy: Web development course, kde jsme měli předvést naše dovednosti v HTML, CSS a JavaScriptu. Na projektu jsem pracovala společně s úžasnou partnerkou ',
+          'Finální projekt v rámci kurzu Czechitas Academy: Web s cílem předvést naše dovednosti v HTML, CSS a JavaScriptu. Na projektu jsem pracovala společně s úžasnou partnerkou ',
           {
             text: 'Jitkou Hladkou',
             url: 'https://www.linkedin.com/in/jitkahladka/',
           },
-          ' a naším cílem bylo vytvořit jednoduchou interaktivní webovou aplikaci zaměřenou na historii komunismu v bývalém Československu. Projekt získal ocenění za největší společenský dopad v rámci Akademie.',
+          ' a naším záměrem bylo vytvořit jednoduchou interaktivní webovou aplikaci zaměřenou na historii komunismu v bývalém Československu. Projekt získal ocenění za největší společenský přesah.',
         ],
         technologies: ['React', 'HTML', 'CSS', 'JavaScript'],
       },
